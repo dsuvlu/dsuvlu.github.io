@@ -22,4 +22,4 @@ I am a Postdoctoral Associate in [Adam Willard's group](http://willardgroup.mit.
 
 ## Funding
 Thanks to the following organizations for their support.\
-[![](./files/afsor.png)](https://scholarblogs.emory.edu/echemmuri/) [<img src="./files/bwf.png" alt="drawing" width="200"/>](https://www.bwfund.org/funding-opportunities/diversity-in-science/postdoctoral-enrichment-program/grant-recipients/) [![](./files/nsf.jpeg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2209216&HistoricalAwards=false)
+[<img src="./files/afsor.png" alt="drawing" width="250"/>](https://scholarblogs.emory.edu/echemmuri/) [<img src="./files/bwf.png" alt="drawing" width="150"/>](https://www.bwfund.org/funding-opportunities/diversity-in-science/postdoctoral-enrichment-program/grant-recipients/) [<img src="./files/nsf.jpeg" alt="drawing" width="200"/>](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2209216&HistoricalAwards=false) [<img src="./files/aises.png" alt="drawing" width="300"/>](https://www.aises.org/)
