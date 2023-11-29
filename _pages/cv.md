@@ -7,4 +7,4 @@ redirect_from:
   - /resume
 ---
 
-A pdf of my CV can be obtained [here](/files/dsuvlu_CV_2023.pdf).
+A pdf of my CV can be obtained [here](/files/dsuvlu_cv_2023.pdf).
