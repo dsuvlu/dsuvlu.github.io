@@ -1,0 +1,15 @@
+/* Minimal CSS tweaks; no Sass layers needed */
+.headshot {
+  border-radius: 50%;
+  border: 1px solid var(--bs-border-color);
+  margin-bottom: 1rem;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0.0);
+}
+
+/* Keep figures and code blocks pleasantly styled */
+img { border-radius: .375rem; }
+pre.sourceCode {
+  border: 1px solid var(--bs-border-color);
+  border-radius: .5rem;
+}
+
