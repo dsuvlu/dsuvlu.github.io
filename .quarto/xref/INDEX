@@ -1,0 +1,35 @@
+{
+  "software/index.qmd": {
+    "index.html": "cd02c745"
+  },
+  "projects/madelung-denoising.qmd": {
+    "madelung-denoising.html": "afe794eb"
+  },
+  "projects/reaction-field-toolkit.qmd": {
+    "reaction-field-toolkit.html": "f51718ad"
+  },
+  "projects/index.qmd": {
+    "index.html": "eb601d72"
+  },
+  "blog/posts/2025-08-17-hello.qmd": {
+    "2025-08-17-hello.html": "c195dd58"
+  },
+  "blog/index.qmd": {
+    "index.html": "4ed6ebbf"
+  },
+  "publications.qmd": {
+    "publications.html": "f9117de3"
+  },
+  "talks/index.qmd": {
+    "index.html": "8963c990"
+  },
+  "index.qmd": {
+    "index.html": "e8daab53"
+  },
+  "cv.qmd": {
+    "cv.html": "09eb863a"
+  },
+  "about/index.qmd": {
+    "index.html": "bd053d2d"
+  }
+}

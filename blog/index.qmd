@@ -1,0 +1,12 @@
+---
+title: "Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  feed: true
+---
+
+Notes, references, and experiments that don't fit neatly in a paper (yet).

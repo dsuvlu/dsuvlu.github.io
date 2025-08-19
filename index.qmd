@@ -1,0 +1,21 @@
+---
+title: "Dylan Suvlu, PhD"
+subtitle: "Postdoctral Associate, MIT"
+about: 
+    template: solana
+    image: assets/headshot.jpg
+    image-shape: round
+    links:
+        - text: "{{< ai cv >}}"
+          href: cv.qmd
+        - text: "{{< ai google-scholar >}}"
+          href: https://scholar.google.com/citations?user=aLT9gJ0AAAAJ&hl=en
+        - icon: github
+          href: https://github.com/dsuvlu
+        - text: "{{< ai orcid >}}"
+          href: https://orcid.org/0000-0003-3216-1338
+        - icon: envelope
+          href: mailto:dsuvlu@gmail.com
+---
+
+I am a computational scientist working at the intersection of chemistry, biology, statistical physics, and machine learning. My current research focus is interfacial electrochemistry. This site collects publications, selected projects, and occasional writing.

@@ -1,0 +1,9 @@
+---
+title: "Publications"
+bibliography: publications.bib
+csl: https://www.zotero.org/styles/american-chemical-society
+nocite: |
+  @*
+---
+
+The list below is rendered from `publications.bib`. Keep it updated and Quarto will regenerate citations automatically.

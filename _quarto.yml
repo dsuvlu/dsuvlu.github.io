@@ -1,0 +1,73 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "Pardon the sawdust. This site is under active development. Pages may shift; broken links happen."
+    type: primary
+    position: below-navbar
+  title: "Dylan Suvlu"
+  site-url: https://dsuvlu.github.io
+  description: "Computational chemistry, statistical physics, and machine learning."
+  repo-url: https://github.com/dsuvlu/dsuvlu.github.io
+  repo-actions: [source]
+  favicon: assets/favicon.svg
+  navbar:
+    background: secondary
+    left:
+      - href: about/index.qmd
+        text: About
+      - text: Research
+        menu:
+          - href: publications.qmd
+            text: Publications
+          - href: projects/index.qmd
+            text: Selected Projects
+      - text: Writing
+        menu:
+          - href: blog/index.qmd
+            text: Blog
+      - href: talks/index.qmd
+        text: Talks
+      - href: software/index.qmd
+        text: Software
+      - href: cv.qmd
+        text: CV
+    right:
+      - text: "{{< ai cv >}}"
+        aria-label: CV
+        href: cv.qmd
+      - text: "{{< ai google-scholar >}}"
+        aria-label: Google Scholar
+        href: https://scholar.google.com/citations?user=aLT9gJ0AAAAJ&hl=en&oi=ao
+      - icon: github
+        aria-label: GitHub
+        href: https://github.com/dsuvlu
+      - text: "{{< ai orcid >}}"
+        aria-label: ORCID
+        href: https://orcid.org/0000-0003-3216-1338
+      - icon: envelope
+        aria-label: Email
+        href: mailto:dsuvlu@gmail.com
+      - icon: rss
+        aria-label: RSS
+        href: blog/index.xml
+  page-footer:
+    left: "© 2025 Dylan Suvlu"
+    right:
+      - text: "RSS"
+        href: blog/index.xml
+      - text: "CC BY 4.0"
+        href: https://creativecommons.org/licenses/by/4.0/
+  search: true
+  twitter-card: true
+  open-graph: true
+
+format:
+  html:
+    theme: simplex
+    css: assets/styles.css
+    #toc: true

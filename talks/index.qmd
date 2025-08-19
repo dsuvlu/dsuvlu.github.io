@@ -1,0 +1,9 @@
+---
+title: "Talks"
+listing:
+  contents: .
+  type: table
+  sort: "date desc"
+  sort-ui: true
+---
+

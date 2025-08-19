@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Dylan Suvlu</title>
+<link>https://dsuvlu.github.io/blog/</link>
+<atom:link href="https://dsuvlu.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Computational chemistry, statistical physics, and machine learning.</description>
+<generator>quarto-1.7.33</generator>
+<lastBuildDate>Sun, 17 Aug 2025 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Hello, world</title>
+  <link>https://dsuvlu.github.io/blog/posts/2025-08-17-hello.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Kicking the tires on a clean, minimal Quarto site.</p>
+
+
+
+ ]]></description>
+  <category>meta</category>
+  <guid>https://dsuvlu.github.io/blog/posts/2025-08-17-hello.html</guid>
+  <pubDate>Sun, 17 Aug 2025 04:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

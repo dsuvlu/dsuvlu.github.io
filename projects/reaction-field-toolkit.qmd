@@ -1,0 +1,11 @@
+---
+title: "Reaction-Field Toolkit"
+date: 2025-01-15
+categories: [electrostatics, theory]
+image: ../assets/headshot.jpg
+---
+
+Derivations that connect continuum reaction-field theory with atomistic models.
+Includes spectral Green functions and validation against MD.
+
+**Links:** [GitHub](https://github.com/) · [Preprint](https://arxiv.org/)

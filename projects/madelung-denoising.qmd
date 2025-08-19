@@ -1,0 +1,8 @@
+---
+title: "Denoising Single-Atom Potentials"
+date: 2024-06-05
+categories: [madelung, gaussian-processes]
+image: ../assets/headshot.jpg
+---
+
+Gaussian-process and wavelet methods for extracting physics from noisy MD traces.

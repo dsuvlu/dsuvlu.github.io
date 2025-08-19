@@ -1,0 +1,8 @@
+---
+title: "Software"
+---
+
+A short list of toolboxes and utilities.
+
+- **rfkit** — reaction-field derivations and numerical experiments. (WIP)
+- **madelung-gp** — GP models for denoising single-atom potentials. (WIP)

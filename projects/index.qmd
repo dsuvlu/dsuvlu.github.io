@@ -1,0 +1,11 @@
+---
+title: "Projects"
+listing:
+  contents: .
+  type: default
+  sort: "date desc"
+  sort-ui: true
+  categories: true
+---
+
+Selected projects and ongoing threads. Each page links to code and papers where available.

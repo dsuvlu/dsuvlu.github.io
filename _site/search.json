@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Open a PDF version of my CV here: Download CV"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Notes, references, and experiments that don’t fit neatly in a paper (yet).\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\nHello, world\n\n\n\nmeta\n\n\n\n\n\n\n\n\n\nAug 17, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Selected projects and ongoing threads. Each page links to code and papers where available.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\nReaction-Field Toolkit\n\n\n\nelectrostatics\n\ntheory\n\n\n\n\n\n\n\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDenoising Single-Atom Potentials\n\n\n\nmadelung\n\ngaussian-processes\n\n\n\n\n\n\n\n\n\nJun 5, 2024\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/madelung-denoising.html",
+    "href": "projects/madelung-denoising.html",
+    "title": "Denoising Single-Atom Potentials",
+    "section": "",
+    "text": "Gaussian-process and wavelet methods for extracting physics from noisy MD traces."
+  },
+  {
+    "objectID": "software/index.html",
+    "href": "software/index.html",
+    "title": "Software",
+    "section": "",
+    "text": "A short list of toolboxes and utilities.\n\nrfkit — reaction-field derivations and numerical experiments. (WIP)\nmadelung-gp — GP models for denoising single-atom potentials. (WIP)"
+  },
+  {
+    "objectID": "projects/reaction-field-toolkit.html",
+    "href": "projects/reaction-field-toolkit.html",
+    "title": "Reaction-Field Toolkit",
+    "section": "",
+    "text": "Derivations that connect continuum reaction-field theory with atomistic models. Includes spectral Green functions and validation against MD.\nLinks: GitHub · Preprint"
+  },
+  {
+    "objectID": "blog/posts/2025-08-17-hello.html",
+    "href": "blog/posts/2025-08-17-hello.html",
+    "title": "Hello, world",
+    "section": "",
+    "text": "Kicking the tires on a clean, minimal Quarto site."
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "The list below is rendered from publications.bib. Keep it updated and Quarto will regenerate citations automatically.\n\n\n\n\nReferences\n\n(1) Lastname, D.; Collaborator, A. Large Fluctuations in the Madelung Potential of Liquid Water. arXiv preprint arXiv:2501.01234 2025.\n\n\n(2) Lastname, D.; Colleague, B. Memory Kernels and Stochastic Quantization for Electrostatics. Journal of Interesting Physics 2024, 12, 1–23."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dylan Suvlu, PhD",
+    "section": "",
+    "text": "I am a computational scientist working at the intersection of chemistry, biology, statistical physics, and machine learning. My current research focus is interfacial electrochemistry. This site collects publications, selected projects, and occasional writing."
+  }
+]
