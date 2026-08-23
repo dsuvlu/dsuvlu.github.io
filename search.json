@@ -1,72 +1,261 @@
 [
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
     "section": "",
-    "text": "Open a PDF version of my CV here: Download CV"
+    "text": "Seven papers, newest first. The through-line is how molecular-scale structure — solvent ordering, confinement, ligand binding — turns into measurable collective behavior."
   },
   {
-    "objectID": "talks/index.html",
-    "href": "talks/index.html",
-    "title": "Talks",
-    "section": "",
-    "text": "No matching items"
+    "objectID": "publications.html#electric-fields-at-solid-liquid-interfaces-insights-from-molecular-dynamics-simulation",
+    "href": "publications.html#electric-fields-at-solid-liquid-interfaces-insights-from-molecular-dynamics-simulation",
+    "title": "Publications",
+    "section": "Electric Fields at Solid-Liquid Interfaces: Insights from Molecular Dynamics Simulation",
+    "text": "Electric Fields at Solid-Liquid Interfaces: Insights from Molecular Dynamics Simulation\nJ. A. Nauman, D. Suvlu, A. P. Willard\nAnnual Review of Physical Chemistry 76, 181–202"
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
+    "objectID": "publications.html#water-molecules-mute-the-dependence-of-the-double-layer-potential-profile-on-ionic-strength",
+    "href": "publications.html#water-molecules-mute-the-dependence-of-the-double-layer-potential-profile-on-ionic-strength",
+    "title": "Publications",
+    "section": "Water molecules mute the dependence of the double-layer potential profile on ionic strength",
+    "text": "Water molecules mute the dependence of the double-layer potential profile on ionic strength\nA. Limaye†, D. Suvlu†, A. P. Willard\nFaraday Discussions 249, 267–288"
+  },
+  {
+    "objectID": "publications.html#bottlebrush-polymers-with-flexible-enantiomeric-side-chains-display-differential-biological-properties",
+    "href": "publications.html#bottlebrush-polymers-with-flexible-enantiomeric-side-chains-display-differential-biological-properties",
+    "title": "Publications",
+    "section": "Bottlebrush polymers with flexible enantiomeric side chains display differential biological properties",
+    "text": "Bottlebrush polymers with flexible enantiomeric side chains display differential biological properties\nH. V.-T. Nguyen, Y. Jiang, S. Mohapatra, W. Wang, J. C. Barnes, N. J. Oldenhuis, K. K. Chen, S. Axelrod, Z. Huang, Q. Chen, M. R. Golder, K. Young, D. Suvlu, Y. Shen, A. P. Willard, M. J. A. Hore, R. Gómez-Bombarelli, J. A. Johnson\nNature Chemistry 14, 85–93"
+  },
+  {
+    "objectID": "publications.html#water-mediated-interactions-determine-helix-formation-of-peptides-in-open-nanotubes",
+    "href": "publications.html#water-mediated-interactions-determine-helix-formation-of-peptides-in-open-nanotubes",
+    "title": "Publications",
+    "section": "Water-mediated interactions determine helix formation of peptides in open nanotubes",
+    "text": "Water-mediated interactions determine helix formation of peptides in open nanotubes\nD. Suvlu, D. Thirumalai, J. C. Rasaiah\nThe Journal of Physical Chemistry B 125, 817–824"
+  },
+  {
+    "objectID": "publications.html#nanocluster-growth-and-coalescence-modulated-by-ligands",
+    "href": "publications.html#nanocluster-growth-and-coalescence-modulated-by-ligands",
+    "title": "Publications",
+    "section": "Nanocluster Growth and Coalescence Modulated by Ligands",
+    "text": "Nanocluster Growth and Coalescence Modulated by Ligands\nD. Suvlu†, M. Farshad†, J. C. Rasaiah\nThe Journal of Physical Chemistry C 124, 17340–17346"
+  },
+  {
+    "objectID": "publications.html#ligand-mediated-nanocluster-formation-with-classical-and-autocatalytic-growth",
+    "href": "publications.html#ligand-mediated-nanocluster-formation-with-classical-and-autocatalytic-growth",
+    "title": "Publications",
+    "section": "Ligand-Mediated Nanocluster Formation with Classical and Autocatalytic Growth",
+    "text": "Ligand-Mediated Nanocluster Formation with Classical and Autocatalytic Growth\nM. Farshad†, D. Suvlu†, J. C. Rasaiah\nThe Journal of Physical Chemistry C 123, 29954–29963"
+  },
+  {
+    "objectID": "publications.html#thermodynamics-of-helixcoil-transitions-of-polyalanine-in-open-carbon-nanotubes",
+    "href": "publications.html#thermodynamics-of-helixcoil-transitions-of-polyalanine-in-open-carbon-nanotubes",
+    "title": "Publications",
+    "section": "Thermodynamics of Helix–Coil Transitions of Polyalanine in Open Carbon Nanotubes",
+    "text": "Thermodynamics of Helix–Coil Transitions of Polyalanine in Open Carbon Nanotubes\nD. Suvlu, S. Samaratunga, D. Thirumalai, J. C. Rasaiah\nThe Journal of Physical Chemistry Letters 8, 494–499"
+  },
+  {
+    "objectID": "blog/posts/2025-08-17-hello.html",
+    "href": "blog/posts/2025-08-17-hello.html",
+    "title": "A place for working notes",
     "section": "",
-    "text": "Notes, references, and experiments that don’t fit neatly in a paper (yet).\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\nHello, world\n\n\n\nmeta\n\n\n\n\n\n\n\n\n\nAug 17, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Research papers are necessarily compressed. The false starts, implementation details, useful references, and small conceptual connections that make the work possible rarely survive into the final manuscript.\nThis section is a place for those pieces: notes on computational chemistry and statistical physics, practical details from scientific software, and short explanations of ideas I want to understand more clearly.\nThe aim is simple—write things down while they are still useful, and make them clear enough that someone else can build on them."
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m a computational scientist interested in the places where chemistry becomes collective: at interfaces, in solution, and across the noisy trajectories produced by molecular simulation."
+  },
+  {
+    "objectID": "about/index.html#what-i-do",
+    "href": "about/index.html#what-i-do",
+    "title": "About",
+    "section": "What I do",
+    "text": "What I do\nMy research combines statistical physics, high-performance molecular simulation, and modern machine learning. I build models that connect microscopic motion to experimentally meaningful observables—especially electric fields, solvent organization, and electrochemical response at solid–liquid interfaces.\nI’m most at home when a problem demands several kinds of thinking at once: physical theory to frame the question, computation to test it, and careful inference to separate signal from noise."
+  },
+  {
+    "objectID": "about/index.html#how-i-work",
+    "href": "about/index.html#how-i-work",
+    "title": "About",
+    "section": "How I work",
+    "text": "How I work\n\n\nPhysics first\nStart from the symmetries, limits, and mechanisms that make a model interpretable.\n\n\nComputation with purpose\nUse simulation and machine learning as instruments for answering a precise scientific question.\n\n\nReproducible by design\nBuild transparent workflows that make results easier to test, extend, and reuse.\n\n\nAcross disciplines\nTranslate ideas between chemistry, physics, biology, and data science without losing the details that matter."
+  },
+  {
+    "objectID": "about/index.html#background",
+    "href": "about/index.html#background",
+    "title": "About",
+    "section": "Background",
+    "text": "Background\n\n\nMassachusetts Institute of Technology\nPostdoctoral associate since 2020. Research spanning interfacial electric fields, Bayesian inference, molecular simulation, and scientific computing.\n\n\nUniversity of Maine\nPhD in chemistry (2020), following a BS in chemistry. Doctoral work explored molecular behavior in confined systems and ligand-mediated nanomaterials."
+  },
+  {
+    "objectID": "about/index.html#lets-connect",
+    "href": "about/index.html#lets-connect",
+    "title": "About",
+    "section": "Let’s connect",
+    "text": "Let’s connect\nFor research conversations, collaborations, or speaking invitations, send me an email. You can also find my work on Google Scholar, GitHub, and ORCID."
   },
   {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
-    "title": "Projects",
+    "title": "Selected projects",
     "section": "",
-    "text": "Selected projects and ongoing threads. Each page links to code and papers where available.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\nReaction-Field Toolkit\n\n\n\nelectrostatics\n\ntheory\n\n\n\n\n\n\n\n\n\nJan 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDenoising Single-Atom Potentials\n\n\n\nmadelung\n\ngaussian-processes\n\n\n\n\n\n\n\n\n\nJun 5, 2024\n\n\n\n\n\nNo matching items"
+    "text": "A selection of working ideas, computational methods, and research directions. These pages focus on the question behind each project and the physical insight it is designed to recover.\n\n\n\n\n\n\n\n\n\n\n\n\nReaction-Field Toolkit\n\n\n\nelectrostatics\n\ntheory\n\n\n\nConnecting continuum reaction-field theory with atomistic electrostatic models.\n\n\n\n\n\n\n\n\n\nDenoising Single-Atom Potentials\n\n\n\nmadelung\n\ngaussian-processes\n\n\n\nRecovering physically meaningful signals from noisy molecular trajectories.\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects/madelung-denoising.html",
-    "href": "projects/madelung-denoising.html",
-    "title": "Denoising Single-Atom Potentials",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dylan Suvlu",
     "section": "",
-    "text": "Gaussian-process and wavelet methods for extracting physics from noisy MD traces."
+    "text": "I use molecular simulation, statistical physics, and machine learning to uncover how microscopic structure shapes macroscopic behavior.\n\nView publications About my work\n\n\n\n\n\n\n\n\n\nTheory, simulation, and data-driven inference for complex molecular systems.\n\n\n\n\nUnderstanding electric fields, solvent structure, and double-layer behavior at solid–liquid interfaces.\n\n\n\nConnecting atomistic trajectories to physical models across liquids, polymers, peptides, and nanomaterials.\n\n\n\nBuilding Bayesian and machine-learning methods that recover interpretable signals from noisy molecular data."
+  },
+  {
+    "objectID": "index.html#research-focus",
+    "href": "index.html#research-focus",
+    "title": "Dylan Suvlu",
+    "section": "",
+    "text": "Theory, simulation, and data-driven inference for complex molecular systems."
   },
   {
     "objectID": "software/index.html",
     "href": "software/index.html",
-    "title": "Software",
+    "title": "Research software",
     "section": "",
-    "text": "A short list of toolboxes and utilities.\n\nrfkit — reaction-field derivations and numerical experiments. (WIP)\nmadelung-gp — GP models for denoising single-atom potentials. (WIP)"
+    "text": "Tools and reusable workflows that grow out of my research in molecular simulation, electrostatics, and statistical inference."
+  },
+  {
+    "objectID": "software/index.html#code",
+    "href": "software/index.html#code",
+    "title": "Research software",
+    "section": "Code",
+    "text": "Code\nPublic code lives on my GitHub profile, including analysis tools and models that accompany the published work. Packaged releases and documentation will be linked here as they stabilize."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Computational scientist working across statistical physics, high-performance molecular simulation, and machine learning. Currently a postdoctoral associate at MIT."
+  },
+  {
+    "objectID": "cv.html#experience",
+    "href": "cv.html#experience",
+    "title": "CV",
+    "section": "Experience",
+    "text": "Experience\n\n\nSep 2020 — present\n\n\nPostdoctoral Associate\nMassachusetts Institute of Technology · Cambridge, MA\n\nDesigned and implemented GPU-accelerated Bayesian inference models that revealed previously undetected patterns in single-atom interfacial electric-field data.\nBuilt end-to-end simulation and analytics pipelines that cut compute time roughly tenfold across coarse-grained polymers, polarizable nanoparticles, and interfacial electric-field systems.\nRecognized by the chemistry department for mentoring graduate and undergraduate students in research.\n\n\n\n\n\nSep 2014 — Aug 2020\n\n\nGraduate Student Researcher\nUniversity of Maine · Orono, ME\n\nMolecular dynamics and statistical-mechanical studies of water-mediated interactions, helix–coil transitions in confined peptides, and ligand-mediated nanocluster growth."
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "CV",
+    "section": "Education",
+    "text": "Education\n\n\n2014 — 2020\n\n\nPh.D., Chemistry\nUniversity of Maine · Orono, ME\n\n\n\n\n2010\n\n\nB.S., Chemistry\nUniversity of Maine · Orono, ME"
+  },
+  {
+    "objectID": "cv.html#awards-and-funding",
+    "href": "cv.html#awards-and-funding",
+    "title": "CV",
+    "section": "Awards and funding",
+    "text": "Awards and funding\n\n\nNSF Postdoctoral Research Fellowship in Biology\nNational Science Foundation · 2022–2024\n\n\nPostdoctoral Enrichment Program Award\nBurroughs Wellcome Fund · 2021–2024\n\n\nMentorship Spotlight Award\n2022\n\n\nSequoyah Fellow\n2016"
+  },
+  {
+    "objectID": "cv.html#technical-skills",
+    "href": "cv.html#technical-skills",
+    "title": "CV",
+    "section": "Technical skills",
+    "text": "Technical skills\n\n\nLanguages\nPython, Julia, C++, Fortran\n\n\nMachine learning and statistics\nPyTorch, PyMC, scikit-learn, XGBoost\n\n\nHigh-performance computing\nCUDA, OpenMP, MPI, SLURM\n\n\nMolecular simulation\nOpenMM, GROMACS, LAMMPS, RDKit\n\n\nInfrastructure\nAWS (S3, Batch), Docker, Git"
+  },
+  {
+    "objectID": "cv.html#publications",
+    "href": "cv.html#publications",
+    "title": "CV",
+    "section": "Publications",
+    "text": "Publications\nSeven peer-reviewed papers. See the full list, or the complete record on Google Scholar and ORCID."
   },
   {
     "objectID": "projects/reaction-field-toolkit.html",
     "href": "projects/reaction-field-toolkit.html",
     "title": "Reaction-Field Toolkit",
     "section": "",
-    "text": "Derivations that connect continuum reaction-field theory with atomistic models. Includes spectral Green functions and validation against MD.\nLinks: GitHub · Preprint"
+    "text": "A working collection of derivations and numerical experiments that connect continuum reaction-field theory with atomistic models."
   },
   {
-    "objectID": "blog/posts/2025-08-17-hello.html",
-    "href": "blog/posts/2025-08-17-hello.html",
-    "title": "Hello, world",
-    "section": "",
-    "text": "Kicking the tires on a clean, minimal Quarto site."
+    "objectID": "projects/reaction-field-toolkit.html#the-question",
+    "href": "projects/reaction-field-toolkit.html#the-question",
+    "title": "Reaction-Field Toolkit",
+    "section": "The question",
+    "text": "The question\nContinuum electrostatics offers elegant descriptions of polarization and screening, while molecular simulation resolves the discrete structure those descriptions average over. The useful physics often lives in the connection between the two."
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "The list below is rendered from publications.bib. Keep it updated and Quarto will regenerate citations automatically.\n\n\n\n\nReferences\n\n(1) Nauman, J.; Suvlu, D.; Willard, A. Electric Fields at Solid-Liquid Interfaces: Insights from Molecular Dynamics Simulation. Annu. Rev. Phys. Chem 2025, 76, 1–22. https://doi.org/10.1146/annurev-physchem-082820-112101.\n\n\n(2) Limaye*, A.; Suvlu*, D.; Willard, A. Water Molecules Mute the Dependence of the Double-Layer Potential Profile on Ionic Strength. Faraday Discuss. 2023. https://doi.org/10.1039/D3FD00114H.\n\n\n(3) Nguyen, H.; Jiang, Y.; Mohapatra, S.; Wang, W.; J. Barnes; N. Oldenhuis; K. Chen; S. Axelrod; Z. Huang; Q. Chen; M. Golder; K. Young; D. Suvlu; Y. Shen; A. P. Willard; M. Hore; R. Gomez-Bombarelli; Johnson., J. Bottlebrush Polymers with Discrete Sidechains Display Stereochemistry- and Conformation-Dependent Biological Properties. Nat. Chem. 2022, 14, 85–93. https://doi.org/10.1038/s41557-021-00826-8.\n\n\n(4) Suvlu, D.; Thirumalai, D.; Rasaiah, J. C. Water-Mediated Interactions Determine Helix Formation of Peptides in Open Nanotubes. J. Phys. Chem. B 2021, 125 (3), 817–824. https://doi.org/10.1021/acs.jpcb.0c10178.\n\n\n(5) Suvlu*, D.; Farshad*, M.; Rasaiah, J. C. Nanocluster Growth and Coalescence Modulated by Ligands. J. Phys. Chem. C 2020, 124 (31), 17340–17346. https://doi.org/10.1021/acs.jpcc.0c04459.\n\n\n(6) Farshad*, M.; Suvlu*, D.; Rasaiah, J. C. Ligand-Mediated Nanocluster Formation with Classical and Autocatalytic Growth. J. Phys. Chem. C 2019, 123 (49), 29954–29963. https://doi.org/10.1021/acs.jpcc.9b07683.\n\n\n(7) Suvlu, D.; Samaratunga, S.; Thirumalai, D.; Rasaiah, J. C. Thermodynamics of Helix–Coil Transitions of Polyalanine in Open Carbon Nanotubes. J. Phys. Chem. Lett. 2017, 8 (2), 494–499. https://doi.org/10.1021/acs.jpclett.6b02620."
+    "objectID": "projects/reaction-field-toolkit.html#the-approach",
+    "href": "projects/reaction-field-toolkit.html#the-approach",
+    "title": "Reaction-Field Toolkit",
+    "section": "The approach",
+    "text": "The approach\nThis project develops spectral Green-function representations, identifies limits in which familiar reaction-field expressions emerge, and tests the resulting predictions against molecular simulation. The emphasis is on derivations that remain numerically tractable and easy to validate."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Dylan Suvlu, PhD",
+    "objectID": "projects/reaction-field-toolkit.html#current-status",
+    "href": "projects/reaction-field-toolkit.html#current-status",
+    "title": "Reaction-Field Toolkit",
+    "section": "Current status",
+    "text": "Current status\nThe derivations and validation suite are in active development. Working code appears on GitHub as the numerical experiments settle."
+  },
+  {
+    "objectID": "projects/madelung-denoising.html",
+    "href": "projects/madelung-denoising.html",
+    "title": "Denoising Single-Atom Potentials",
     "section": "",
-    "text": "I am a computational scientist working at the intersection of chemistry, biology, statistical physics, and machine learning. My current research focus is interfacial electrochemistry. This site collects publications, selected projects, and occasional writing."
+    "text": "Bayesian, Gaussian-process, and multiscale methods for extracting physics from noisy molecular-dynamics signals."
+  },
+  {
+    "objectID": "projects/madelung-denoising.html#the-challenge",
+    "href": "projects/madelung-denoising.html#the-challenge",
+    "title": "Denoising Single-Atom Potentials",
+    "section": "The challenge",
+    "text": "The challenge\nSingle-atom electrostatic potentials fluctuate strongly in molecular simulations. The signal of interest can be smaller than the instantaneous thermal noise, and straightforward averaging can erase the local structure that gives the signal physical meaning."
+  },
+  {
+    "objectID": "projects/madelung-denoising.html#the-approach",
+    "href": "projects/madelung-denoising.html#the-approach",
+    "title": "Denoising Single-Atom Potentials",
+    "section": "The approach",
+    "text": "The approach\nThis project combines structured probabilistic models with multiscale signal processing. The goal is not only to smooth a trajectory, but to quantify uncertainty and preserve the time and length scales that connect molecular fluctuations to interfacial response."
+  },
+  {
+    "objectID": "projects/madelung-denoising.html#current-status",
+    "href": "projects/madelung-denoising.html#current-status",
+    "title": "Denoising Single-Atom Potentials",
+    "section": "Current status",
+    "text": "Current status\nModel comparison and physical validation are ongoing. Notes and code from this work appear on GitHub as individual pieces become usable on their own."
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "I speak about molecular simulation, interfacial electric fields, data-driven physical modeling, and the practical craft of computational research."
+  },
+  {
+    "objectID": "talks/index.html#topics",
+    "href": "talks/index.html#topics",
+    "title": "Talks",
+    "section": "Topics",
+    "text": "Topics\n\nElectric fields and solvent structure at solid–liquid interfaces\nStatistical inference for noisy molecular-dynamics data\nConnecting continuum theory with atomistic simulation\nReproducible, GPU-accelerated scientific workflows"
+  },
+  {
+    "objectID": "talks/index.html#invitations",
+    "href": "talks/index.html#invitations",
+    "title": "Talks",
+    "section": "Invitations",
+    "text": "Invitations\nFor seminars, workshops, or conference sessions, get in touch."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Short pieces about methods, papers, references, and computational experiments that do not fit neatly into a research article.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA place for working notes\n\n\n\nmeta\n\n\n\nWhy this site includes a space for methods, references, and unfinished technical ideas.\n\n\n\n\n\nAug 17, 2025\n\n\n\n\n\nNo matching items"
   }
 ]

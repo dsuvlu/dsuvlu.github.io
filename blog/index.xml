@@ -8,25 +8,28 @@
 <title>Dylan Suvlu</title>
 <link>https://dsuvlu.github.io/blog/</link>
 <atom:link href="https://dsuvlu.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
-<description>Computational chemistry, statistical physics, and machine learning.</description>
-<generator>quarto-1.7.33</generator>
-<lastBuildDate>Sun, 17 Aug 2025 04:00:00 GMT</lastBuildDate>
+<description>Working notes on computational chemistry, statistical physics, and scientific computing.</description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Sun, 17 Aug 2025 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Hello, world</title>
+  <title>A place for working notes</title>
   <link>https://dsuvlu.github.io/blog/posts/2025-08-17-hello.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p>Kicking the tires on a clean, minimal Quarto site.</p>
+
+<p>Research papers are necessarily compressed. The false starts, implementation details, useful references, and small conceptual connections that make the work possible rarely survive into the final manuscript.</p>
+<p>This section is a place for those pieces: notes on computational chemistry and statistical physics, practical details from scientific software, and short explanations of ideas I want to understand more clearly.</p>
+<p>The aim is simple—write things down while they are still useful, and make them clear enough that someone else can build on them.</p>
 
 
 
  ]]></description>
   <category>meta</category>
   <guid>https://dsuvlu.github.io/blog/posts/2025-08-17-hello.html</guid>
-  <pubDate>Sun, 17 Aug 2025 04:00:00 GMT</pubDate>
+  <pubDate>Sun, 17 Aug 2025 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
