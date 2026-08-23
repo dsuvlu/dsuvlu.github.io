@@ -1,5 +1,146 @@
 ---
 title: "CV"
+description: "Research experience, education, awards and funding, and technical skills for Dylan Suvlu."
 ---
 
-Open a PDF version of my CV here: [Download CV](files/cv.pdf)
+<p class="interior-lede">Computational scientist working across statistical physics, high-performance molecular simulation, and machine learning. Currently a postdoctoral associate at MIT.</p>
+
+::: {.download-card}
+::: {}
+**Curriculum vitae**
+
+PDF · one page
+:::
+
+[Download CV](files/cv.pdf){.site-button .site-button--primary target="_blank"}
+:::
+
+::: {.content-section}
+## Experience
+
+::: {.cv-entry}
+::: {.cv-when}
+Sep 2020 — present
+:::
+::: {.cv-what}
+### Postdoctoral Associate
+
+**Massachusetts Institute of Technology** · Cambridge, MA
+
+- Designed and implemented GPU-accelerated Bayesian inference models that revealed previously undetected patterns in single-atom interfacial electric-field data.
+- Built end-to-end simulation and analytics pipelines that cut compute time roughly tenfold across coarse-grained polymers, polarizable nanoparticles, and interfacial electric-field systems.
+- Recognized by the chemistry department for mentoring graduate and undergraduate students in research.
+:::
+:::
+
+::: {.cv-entry}
+::: {.cv-when}
+Sep 2014 — Aug 2020
+:::
+::: {.cv-what}
+### Graduate Student Researcher
+
+**University of Maine** · Orono, ME
+
+- Molecular dynamics and statistical-mechanical studies of water-mediated interactions, helix–coil transitions in confined peptides, and ligand-mediated nanocluster growth.
+:::
+:::
+:::
+
+::: {.content-section}
+## Education
+
+::: {.cv-entry}
+::: {.cv-when}
+2014 — 2020
+:::
+::: {.cv-what}
+### Ph.D., Chemistry
+
+**University of Maine** · Orono, ME
+:::
+:::
+
+::: {.cv-entry}
+::: {.cv-when}
+2010
+:::
+::: {.cv-what}
+### B.S., Chemistry
+
+**University of Maine** · Orono, ME
+:::
+:::
+:::
+
+::: {.content-section}
+## Awards and funding
+
+::: {.fact-grid}
+::: {.fact-card}
+### NSF Postdoctoral Research Fellowship in Biology
+
+National Science Foundation · 2022–2024
+:::
+
+::: {.fact-card}
+### Postdoctoral Enrichment Program Award
+
+Burroughs Wellcome Fund · 2021–2024
+:::
+
+::: {.fact-card}
+### Mentorship Spotlight Award
+
+2022
+:::
+
+::: {.fact-card}
+### Sequoyah Fellow
+
+2016
+:::
+:::
+:::
+
+::: {.content-section}
+## Technical skills
+
+::: {.skill-grid}
+::: {.skill-group}
+### Languages
+
+Python, Julia, C++, Fortran
+:::
+
+::: {.skill-group}
+### Machine learning and statistics
+
+PyTorch, PyMC, scikit-learn, XGBoost
+:::
+
+::: {.skill-group}
+### High-performance computing
+
+CUDA, OpenMP, MPI, SLURM
+:::
+
+::: {.skill-group}
+### Molecular simulation
+
+OpenMM, GROMACS, LAMMPS, RDKit
+:::
+
+::: {.skill-group}
+### Infrastructure
+
+AWS (S3, Batch), Docker, Git
+:::
+:::
+:::
+
+::: {.content-section}
+## Publications
+
+Seven peer-reviewed papers. See the [full list](publications.qmd), or the complete record on [Google Scholar](https://scholar.google.com/citations?user=aLT9gJ0AAAAJ&hl=en) and [ORCID](https://orcid.org/0000-0003-3216-1338).
+:::

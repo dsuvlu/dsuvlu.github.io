@@ -1,11 +1,26 @@
 ---
 title: "Reaction-Field Toolkit"
+description: "Connecting continuum reaction-field theory with atomistic electrostatic models."
 date: 2025-01-15
 categories: [electrostatics, theory]
-image: ../assets/headshot.jpg
 ---
 
-Derivations that connect continuum reaction-field theory with atomistic models.
-Includes spectral Green functions and validation against MD.
+<p class="interior-lede">A working collection of derivations and numerical experiments that connect continuum reaction-field theory with atomistic models.</p>
 
-**Links:** [GitHub](https://github.com/) · [Preprint](https://arxiv.org/)
+::: {.content-section}
+## The question
+
+Continuum electrostatics offers elegant descriptions of polarization and screening, while molecular simulation resolves the discrete structure those descriptions average over. The useful physics often lives in the connection between the two.
+:::
+
+::: {.content-section}
+## The approach
+
+This project develops spectral Green-function representations, identifies limits in which familiar reaction-field expressions emerge, and tests the resulting predictions against molecular simulation. The emphasis is on derivations that remain numerically tractable and easy to validate.
+:::
+
+::: {.content-section}
+## Current status
+
+The derivations and validation suite are in active development. Working code appears on [GitHub](https://github.com/dsuvlu) as the numerical experiments settle.
+:::

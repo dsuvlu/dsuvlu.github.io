@@ -1,21 +1,58 @@
 ---
-title: "Dylan Suvlu, PhD"
-subtitle: "Postdoctral Associate, MIT"
-about: 
-    template: solana
-    image: assets/headshot.jpg
-    image-shape: round
-    links:
-        - text: "{{< ai cv >}}"
-          href: cv.qmd
-        - text: "{{< ai google-scholar >}}"
-          href: https://scholar.google.com/citations?user=aLT9gJ0AAAAJ&hl=en
-        - icon: github
-          href: https://github.com/dsuvlu
-        - text: "{{< ai orcid >}}"
-          href: https://orcid.org/0000-0003-3216-1338
-        - icon: envelope
-          href: mailto:dsuvlu@gmail.com
+title: "Dylan Suvlu"
+# Quarto promotes a leading h1 into the (hidden) title block when no title
+# is set, which silently swallowed the hero headline. An explicit title
+# keeps the headline in the hero where it belongs.
+pagetitle: "Dylan Suvlu"
+description: "Research at the intersection of chemistry, physics, biology, and computation."
+page-layout: full
 ---
 
-I am a computational scientist working at the intersection of chemistry, biology, statistical physics, and machine learning. My current research focus is interfacial electrochemistry. This site collects publications, selected projects, and occasional writing.
+::: {.home-page}
+
+::: {.hero}
+::: {.hero-copy}
+<h1 aria-label="Chemistry intersect physics intersect biology intersect computation"><span class="set-term">Chemistry</span> <span class="set-op">∩</span> <span class="set-term">Physics</span> <span class="set-op">∩</span> <span class="set-term">Biology</span> <span class="set-op">∩</span> <span class="set-term">Computation</span></h1>
+
+I use molecular simulation, statistical physics, and machine learning to uncover how microscopic structure shapes macroscopic behavior.
+
+::: {.hero-actions}
+[View publications](publications.qmd){.site-button .site-button--primary}
+[About my work](about/index.qmd){.site-button .site-button--ghost}
+:::
+:::
+
+::: {.hero-visual}
+![](assets/headshot.jpg){.hero-photo alt="Portrait of Dylan Suvlu"}
+:::
+:::
+
+::: {.home-section .focus-section}
+::: {.section-heading}
+## Research focus
+
+Theory, simulation, and data-driven inference for complex molecular systems.
+:::
+
+::: {.focus-grid}
+::: {.focus-card}
+### [Interfacial electrochemistry](projects/reaction-field-toolkit.qmd)
+
+Understanding electric fields, solvent structure, and double-layer behavior at solid–liquid interfaces.
+:::
+
+::: {.focus-card}
+### [Molecular simulation](publications.qmd)
+
+Connecting atomistic trajectories to physical models across liquids, polymers, peptides, and nanomaterials.
+:::
+
+::: {.focus-card}
+### [Data-driven inference](projects/madelung-denoising.qmd)
+
+Building Bayesian and machine-learning methods that recover interpretable signals from noisy molecular data.
+:::
+:::
+:::
+
+:::

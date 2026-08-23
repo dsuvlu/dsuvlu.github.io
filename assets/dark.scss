@@ -1,0 +1,44 @@
+/*-- scss:defaults --*/
+
+// Layered on top of the default Bootstrap theme to give Quarto a genuinely
+// distinct dark theme. Quarto only stamps the dark stylesheet with
+// data-mode="dark" (which is what flips body.quarto-dark, and therefore the
+// palette in assets/styles.css) when the two themes actually differ.
+//
+// Keep these in step with the body.quarto-dark token block in styles.css.
+
+$body-bg: #0b1522;
+$body-color: #e7ecf3;
+$link-color: #7fa8ff;
+$link-hover-color: #a2c0ff;
+
+$border-color: rgba(231, 236, 243, 0.16);
+
+$input-bg: #111e30;
+$input-color: #e7ecf3;
+$input-border-color: rgba(231, 236, 243, 0.22);
+$input-placeholder-color: #8595a9;
+
+$dropdown-bg: #111e30;
+$dropdown-link-color: #e7ecf3;
+$dropdown-link-hover-bg: rgba(127, 168, 255, 0.13);
+
+$code-color: #e0b6a4;
+$code-bg: rgba(255, 255, 255, 0.05);
+$pre-bg: rgba(255, 255, 255, 0.04);
+
+/*-- scss:rules --*/
+
+// Quarto's search overlay is built from Bootstrap surfaces, so it needs the
+// dark ground explicitly or it renders as a light panel over a dark page.
+.quarto-search-results,
+.aa-Panel,
+.aa-PanelLayout {
+  color: #e7ecf3;
+  background: #111e30;
+}
+
+.aa-Item[aria-selected="true"],
+.aa-Item:hover {
+  background: rgba(127, 168, 255, 0.13);
+}

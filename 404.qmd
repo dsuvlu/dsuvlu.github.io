@@ -1,0 +1,10 @@
+---
+title: "Page not found"
+description: "That page doesn't exist."
+---
+
+<p class="interior-lede">That page doesn’t exist — it may have moved, or the link may be incomplete.</p>
+
+::: {.content-section}
+Try the [publications](publications.qmd), a [selected project](projects/index.qmd), or the [notes](blog/index.qmd). If you followed a link from elsewhere and it should work, [let me know](mailto:dsuvlu@gmail.com).
+:::

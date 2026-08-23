@@ -1,0 +1,68 @@
+---
+title: "About"
+description: "Dylan Suvlu is a computational scientist working across chemistry, statistical physics, and machine learning."
+---
+
+<p class="interior-lede">I’m a computational scientist interested in the places where chemistry becomes collective: at interfaces, in solution, and across the noisy trajectories produced by molecular simulation.</p>
+
+::: {.content-section}
+## What I do
+
+My research combines statistical physics, high-performance molecular simulation, and modern machine learning. I build models that connect microscopic motion to experimentally meaningful observables—especially electric fields, solvent organization, and electrochemical response at solid–liquid interfaces.
+
+I’m most at home when a problem demands several kinds of thinking at once: physical theory to frame the question, computation to test it, and careful inference to separate signal from noise.
+:::
+
+::: {.content-section}
+## How I work
+
+::: {.principle-grid}
+::: {.principle-card}
+### Physics first
+
+Start from the symmetries, limits, and mechanisms that make a model interpretable.
+:::
+
+::: {.principle-card}
+### Computation with purpose
+
+Use simulation and machine learning as instruments for answering a precise scientific question.
+:::
+
+::: {.principle-card}
+### Reproducible by design
+
+Build transparent workflows that make results easier to test, extend, and reuse.
+:::
+
+::: {.principle-card}
+### Across disciplines
+
+Translate ideas between chemistry, physics, biology, and data science without losing the details that matter.
+:::
+:::
+:::
+
+::: {.content-section}
+## Background
+
+::: {.fact-grid}
+::: {.fact-card}
+### Massachusetts Institute of Technology
+
+Postdoctoral associate since 2020. Research spanning interfacial electric fields, Bayesian inference, molecular simulation, and scientific computing.
+:::
+
+::: {.fact-card}
+### University of Maine
+
+PhD in chemistry (2020), following a BS in chemistry. Doctoral work explored molecular behavior in confined systems and ligand-mediated nanomaterials.
+:::
+:::
+:::
+
+::: {.content-section}
+## Let’s connect
+
+For research conversations, collaborations, or speaking invitations, [send me an email](mailto:dsuvlu@gmail.com). You can also find my work on [Google Scholar](https://scholar.google.com/citations?user=aLT9gJ0AAAAJ&hl=en), [GitHub](https://github.com/dsuvlu), and [ORCID](https://orcid.org/0000-0003-3216-1338).
+:::

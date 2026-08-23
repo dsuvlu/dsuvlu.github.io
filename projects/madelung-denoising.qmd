@@ -1,8 +1,26 @@
 ---
 title: "Denoising Single-Atom Potentials"
+description: "Recovering physically meaningful signals from noisy molecular trajectories."
 date: 2024-06-05
 categories: [madelung, gaussian-processes]
-image: ../assets/headshot.jpg
 ---
 
-Gaussian-process and wavelet methods for extracting physics from noisy MD traces.
+<p class="interior-lede">Bayesian, Gaussian-process, and multiscale methods for extracting physics from noisy molecular-dynamics signals.</p>
+
+::: {.content-section}
+## The challenge
+
+Single-atom electrostatic potentials fluctuate strongly in molecular simulations. The signal of interest can be smaller than the instantaneous thermal noise, and straightforward averaging can erase the local structure that gives the signal physical meaning.
+:::
+
+::: {.content-section}
+## The approach
+
+This project combines structured probabilistic models with multiscale signal processing. The goal is not only to smooth a trajectory, but to quantify uncertainty and preserve the time and length scales that connect molecular fluctuations to interfacial response.
+:::
+
+::: {.content-section}
+## Current status
+
+Model comparison and physical validation are ongoing. Notes and code from this work appear on [GitHub](https://github.com/dsuvlu) as individual pieces become usable on their own.
+:::

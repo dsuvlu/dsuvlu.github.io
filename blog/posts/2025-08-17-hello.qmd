@@ -1,7 +1,12 @@
 ---
-title: "Hello, world"
+title: "A place for working notes"
+description: "Why this site includes a space for methods, references, and unfinished technical ideas."
 date: 2025-08-17
 categories: [meta]
 ---
 
-Kicking the tires on a clean, minimal Quarto site.
+Research papers are necessarily compressed. The false starts, implementation details, useful references, and small conceptual connections that make the work possible rarely survive into the final manuscript.
+
+This section is a place for those pieces: notes on computational chemistry and statistical physics, practical details from scientific software, and short explanations of ideas I want to understand more clearly.
+
+The aim is simple—write things down while they are still useful, and make them clear enough that someone else can build on them.

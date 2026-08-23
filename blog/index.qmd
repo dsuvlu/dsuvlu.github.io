@@ -1,12 +1,13 @@
 ---
-title: "Blog"
+title: "Notes"
+description: "Working notes on computational chemistry, statistical physics, and scientific computing."
 listing:
   contents: posts
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: true
+  sort-ui: false
   feed: true
 ---
 
-Notes, references, and experiments that don't fit neatly in a paper (yet).
+<p class="interior-lede">Short pieces about methods, papers, references, and computational experiments that do not fit neatly into a research article.</p>

@@ -1,9 +1,21 @@
 ---
 title: "Talks"
-listing:
-  contents: .
-  type: table
-  sort: "date desc"
-  sort-ui: true
+description: "Selected research talk themes and contact information."
 ---
 
+<p class="interior-lede">I speak about molecular simulation, interfacial electric fields, data-driven physical modeling, and the practical craft of computational research.</p>
+
+::: {.content-section}
+## Topics
+
+- Electric fields and solvent structure at solid–liquid interfaces
+- Statistical inference for noisy molecular-dynamics data
+- Connecting continuum theory with atomistic simulation
+- Reproducible, GPU-accelerated scientific workflows
+:::
+
+::: {.content-section}
+## Invitations
+
+For seminars, workshops, or conference sessions, [get in touch](mailto:dsuvlu@gmail.com).
+:::

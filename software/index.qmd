@@ -1,8 +1,12 @@
 ---
-title: "Software"
+title: "Research software"
+description: "Scientific tools for electrostatics, molecular simulation, and data-driven inference."
 ---
 
-A short list of toolboxes and utilities.
+<p class="interior-lede">Tools and reusable workflows that grow out of my research in molecular simulation, electrostatics, and statistical inference.</p>
 
-- **rfkit** — reaction-field derivations and numerical experiments. (WIP)
-- **madelung-gp** — GP models for denoising single-atom potentials. (WIP)
+::: {.content-section}
+## Code
+
+Public code lives on [my GitHub profile](https://github.com/dsuvlu), including analysis tools and models that accompany the published work. Packaged releases and documentation will be linked here as they stabilize.
+:::

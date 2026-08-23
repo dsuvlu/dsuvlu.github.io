@@ -1,0 +1,35 @@
+name: Publish Quarto site
+
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+# One deploy at a time; a newer push supersedes an in-flight run rather than
+# racing it onto gh-pages.
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          # Pinned so a Quarto release cannot change the published output
+          # without a commit here. Bump deliberately after rendering locally.
+          version: 1.9.38
+
+      - name: Render and publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

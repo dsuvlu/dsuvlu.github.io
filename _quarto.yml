@@ -3,20 +3,14 @@ project:
   output-dir: _site
 
 website:
-  announcement: 
-    icon: info-circle
-    dismissable: true
-    content: "Pardon the sawdust. This site is under active development. Pages may shift; broken links happen."
-    type: primary
-    position: below-navbar
   title: "Dylan Suvlu"
   site-url: https://dsuvlu.github.io
-  description: "Computational chemistry, statistical physics, and machine learning."
+  description: "Computational scientist working across chemistry, statistical physics, and machine learning."
   repo-url: https://github.com/dsuvlu/dsuvlu.github.io
-  repo-actions: [source]
   favicon: assets/favicon.svg
   navbar:
-    background: secondary
+    background: light
+    pinned: true
     left:
       - href: about/index.qmd
         text: About
@@ -25,21 +19,16 @@ website:
           - href: publications.qmd
             text: Publications
           - href: projects/index.qmd
-            text: Selected Projects
-      - text: Writing
-        menu:
-          - href: blog/index.qmd
-            text: Blog
-      - href: talks/index.qmd
-        text: Talks
-      - href: software/index.qmd
-        text: Software
+            text: Selected projects
+          - href: software/index.qmd
+            text: Research software
+          - href: talks/index.qmd
+            text: Talks
+      - href: blog/index.qmd
+        text: Notes
       - href: cv.qmd
         text: CV
     right:
-      - text: "{{< ai cv >}}"
-        aria-label: CV
-        href: cv.qmd
       - text: "{{< ai google-scholar >}}"
         aria-label: Google Scholar
         href: https://scholar.google.com/citations?user=aLT9gJ0AAAAJ&hl=en&oi=ao
@@ -56,18 +45,35 @@ website:
         aria-label: RSS
         href: blog/index.xml
   page-footer:
-    left: "© 2025 Dylan Suvlu"
+    # Quarto has no template variable for the year; update this each January.
+    left: "© 2026 Dylan Suvlu"
     right:
-      - text: "RSS"
-        href: blog/index.xml
       - text: "CC BY 4.0"
         href: https://creativecommons.org/licenses/by/4.0/
-  search: true
-  twitter-card: true
-  open-graph: true
+  search:
+    location: navbar
+    type: overlay
+  twitter-card:
+    image: assets/social-preview.jpg
+    card-style: summary_large_image
+  open-graph:
+    image: assets/social-preview.jpg
+    locale: en_US
+
+filters:
+  - _extensions/seo/seo.lua
 
 format:
   html:
-    theme: simplex
+    theme:
+      light: default
+      dark: [default, assets/dark.scss]
     css: assets/styles.css
-    #toc: true
+    smooth-scroll: true
+    # consumed by _extensions/seo/seo.lua; keep in step with website.site-url
+    canonical-base: https://dsuvlu.github.io
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500;600&family=Mulish:wght@400;600;700;800&display=swap">

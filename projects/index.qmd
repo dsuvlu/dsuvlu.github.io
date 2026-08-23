@@ -1,11 +1,14 @@
 ---
-title: "Projects"
+title: "Selected projects"
+description: "Research projects and ongoing technical threads across molecular simulation, electrostatics, and machine learning."
 listing:
   contents: .
-  type: default
+  type: grid
+  grid-columns: 2
+  fields: [title, description, categories]
   sort: "date desc"
-  sort-ui: true
+  sort-ui: false
   categories: true
 ---
 
-Selected projects and ongoing threads. Each page links to code and papers where available.
+<p class="interior-lede">A selection of working ideas, computational methods, and research directions. These pages focus on the question behind each project and the physical insight it is designed to recover.</p>
