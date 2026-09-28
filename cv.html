@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9c6d23e8c3de46921320eee288d20d40.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4bbef2948ffaf0f346554da2511672c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-9c6d23e8c3de46921320eee288d20d40.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-eb0ebb17a95135e404457d815ad5ec99.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-cb72cc1f504b102fb61c2b0af8fe35ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-eb0ebb17a95135e404457d815ad5ec99.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -77,9 +77,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500;600&amp;family=Mulish:wght@400;600;700;800&amp;display=swap">
+<link rel="preload" href="./assets/fonts/gelasio-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="./assets/fonts/mulish-latin.woff2" as="font" type="font/woff2" crossorigin="">
 <link rel="canonical" href="https://dsuvlu.github.io/cv.html">
 
 
@@ -375,28 +374,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p class="interior-lede">
-Computational scientist working across statistical physics, high-performance molecular simulation, and machine learning. Currently a postdoctoral associate at MIT.
-</p>
+<div class="interior-lede">
+<p>Computational scientist working across statistical physics, high-performance molecular simulation, and machine learning.</p>
+</div>
 <div class="download-card">
 <div>
 <p><strong>Curriculum vitae</strong></p>
-<p>PDF · one page</p>
+<p>PDF · generated from this page</p>
 </div>
-<p><a href="files/cv.pdf" class="site-button site-button--primary" target="_blank">Download CV</a></p>
+<p><a href="cv.pdf" class="site-button site-button--primary" target="_blank">Download CV</a></p>
 </div>
 <section id="experience" class="level2 content-section">
 <h2 class="anchored" data-anchor-id="experience">Experience</h2>
 <div class="cv-entry">
 <div class="cv-when">
-<p>Sep 2020 — present</p>
+<p>Sep 2020 — Sep 2025</p>
 </div>
 <section id="postdoctoral-associate" class="level3 cv-what">
 <h3 class="anchored" data-anchor-id="postdoctoral-associate">Postdoctoral Associate</h3>
 <p><strong>Massachusetts Institute of Technology</strong> · Cambridge, MA</p>
 <ul>
+<li>Led molecular-dynamics and machine-learning studies of interfacial electrostatics.</li>
 <li>Designed and implemented GPU-accelerated Bayesian inference models that revealed previously undetected patterns in single-atom interfacial electric-field data.</li>
+<li>Developed high-performance, GPU-accelerated Julia implementations of Ewald summation and related electrostatics methods.</li>
+<li>Performed free-energy perturbation and thermodynamic-integration calculations for electron-transfer reactions at nanoparticle and electrode interfaces.</li>
 <li>Built end-to-end simulation and analytics pipelines that cut compute time roughly tenfold across coarse-grained polymers, polarizable nanoparticles, and interfacial electric-field systems.</li>
+<li>Standardized reproducible pipelines (Pixi, Docker, CI) that were adopted across projects.</li>
 <li>Recognized by the chemistry department for mentoring graduate and undergraduate students in research.</li>
 </ul>
 </section>
@@ -409,7 +412,8 @@ Computational scientist working across statistical physics, high-performance mol
 <h3 class="anchored" data-anchor-id="graduate-student-researcher">Graduate Student Researcher</h3>
 <p><strong>University of Maine</strong> · Orono, ME</p>
 <ul>
-<li>Molecular dynamics and statistical-mechanical studies of water-mediated interactions, helix–coil transitions in confined peptides, and ligand-mediated nanocluster growth.</li>
+<li>Generated and analyzed ~100 TB of molecular-dynamics data to understand how water-mediated interactions govern helix–coil transitions of peptides confined in carbon nanotubes.</li>
+<li>Developed kinetic models of ligand-mediated nanocluster formation and growth.</li>
 </ul>
 </section>
 </div>
@@ -420,8 +424,8 @@ Computational scientist working across statistical physics, high-performance mol
 <div class="cv-when">
 <p>2014 — 2020</p>
 </div>
-<section id="ph.d.-chemistry" class="level3 cv-what">
-<h3 class="anchored" data-anchor-id="ph.d.-chemistry">Ph.D., Chemistry</h3>
+<section id="ph.d.-physical-chemistry" class="level3 cv-what">
+<h3 class="anchored" data-anchor-id="ph.d.-physical-chemistry">Ph.D., Physical Chemistry</h3>
 <p><strong>University of Maine</strong> · Orono, ME</p>
 </section>
 </div>
@@ -448,11 +452,11 @@ Computational scientist working across statistical physics, high-performance mol
 </section>
 <section id="mentorship-spotlight-award" class="level3 fact-card">
 <h3 class="anchored" data-anchor-id="mentorship-spotlight-award">Mentorship Spotlight Award</h3>
-<p>2022</p>
+<p>MIT Department of Chemistry · 2022</p>
 </section>
 <section id="sequoyah-fellow" class="level3 fact-card">
 <h3 class="anchored" data-anchor-id="sequoyah-fellow">Sequoyah Fellow</h3>
-<p>2016</p>
+<p>American Indian Science and Engineering Society · 2016</p>
 </section>
 </div>
 </section>
@@ -469,15 +473,15 @@ Computational scientist working across statistical physics, high-performance mol
 </section>
 <section id="high-performance-computing" class="level3 skill-group">
 <h3 class="anchored" data-anchor-id="high-performance-computing">High-performance computing</h3>
-<p>CUDA, OpenMP, MPI, SLURM</p>
+<p>CUDA, OpenMP, MPI, Numba, SLURM</p>
 </section>
 <section id="molecular-simulation" class="level3 skill-group">
 <h3 class="anchored" data-anchor-id="molecular-simulation">Molecular simulation</h3>
-<p>OpenMM, GROMACS, LAMMPS, RDKit</p>
+<p>OpenMM, GROMACS, LAMMPS, HOOMD-blue, RDKit, VMD, PyMOL</p>
 </section>
-<section id="infrastructure" class="level3 skill-group">
-<h3 class="anchored" data-anchor-id="infrastructure">Infrastructure</h3>
-<p>AWS (S3, Batch), Docker, Git</p>
+<section id="data-and-infrastructure" class="level3 skill-group">
+<h3 class="anchored" data-anchor-id="data-and-infrastructure">Data and infrastructure</h3>
+<p>NumPy, pandas, Polars, Dask, AWS (S3, Batch), Docker, Pixi, Git</p>
 </section>
 </div>
 </section>

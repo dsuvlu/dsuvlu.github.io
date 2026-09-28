@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Research at the intersection of chemistry, physics, biology, and computation.">
+<meta name="dcterms.date" content="2021-01-19">
+<meta name="description" content="How confinement and the water around it decide whether a peptide folds into a helix.">
 
-<title>Dylan Suvlu</title>
+<title>Helices in Nanotubes – Dylan Suvlu</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,29 +28,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-eb0ebb17a95135e404457d815ad5ec99.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-cb72cc1f504b102fb61c2b0af8fe35ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-eb0ebb17a95135e404457d815ad5ec99.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-eb0ebb17a95135e404457d815ad5ec99.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-cb72cc1f504b102fb61c2b0af8fe35ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-eb0ebb17a95135e404457d815ad5ec99.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,62 +78,24 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<link rel="preload" href="./assets/fonts/gelasio-latin.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="preload" href="./assets/fonts/mulish-latin.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="canonical" href="https://dsuvlu.github.io/">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dylan Suvlu",
-  "url": "https://dsuvlu.github.io/",
-  "email": "mailto:dsuvlu@gmail.com",
-  "jobTitle": "Computational Scientist",
-  "alumniOf": [
-    {
-      "@type": "CollegeOrUniversity",
-      "name": "Massachusetts Institute of Technology"
-    },
-    {
-      "@type": "CollegeOrUniversity",
-      "name": "University of Maine"
-    }
-  ],
-  "knowsAbout": [
-    "Computational chemistry",
-    "Statistical physics",
-    "Molecular dynamics simulation",
-    "Interfacial electrochemistry",
-    "Bayesian inference",
-    "Machine learning"
-  ],
-  "identifier": {
-    "@type": "PropertyValue",
-    "propertyID": "ORCID",
-    "value": "https://orcid.org/0000-0003-3216-1338"
-  },
-  "sameAs": [
-    "https://orcid.org/0000-0003-3216-1338",
-    "https://scholar.google.com/citations?user=aLT9gJ0AAAAJ&hl=en",
-    "https://github.com/dsuvlu"
-  ]
-}
-</script>
+<link rel="preload" href="../assets/fonts/gelasio-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../assets/fonts/mulish-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="canonical" href="https://dsuvlu.github.io/projects/helix-coil-nanotubes.html">
 
 
-<link rel="stylesheet" href="assets/styles.css">
-<meta property="og:title" content="Dylan Suvlu">
-<meta property="og:description" content="Research at the intersection of chemistry, physics, biology, and computation.">
-<meta property="og:image" content="https://dsuvlu.github.io/assets/social-preview.jpg">
+<link rel="stylesheet" href="../assets/styles.css">
+<meta property="og:title" content="Helices in Nanotubes – Dylan Suvlu">
+<meta property="og:description" content="How confinement and the water around it decide whether a peptide folds into a helix.">
+<meta property="og:image" content="https://dsuvlu.github.io/projects/assets/social-preview.jpg">
 <meta property="og:site_name" content="Dylan Suvlu">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Dylan Suvlu">
-<meta name="twitter:description" content="Research at the intersection of chemistry, physics, biology, and computation.">
-<meta name="twitter:image" content="https://dsuvlu.github.io/assets/social-preview.jpg">
+<meta name="twitter:title" content="Helices in Nanotubes – Dylan Suvlu">
+<meta name="twitter:description" content="How confinement and the water around it decide whether a peptide folds into a helix.">
+<meta name="twitter:image" content="https://dsuvlu.github.io/projects/assets/social-preview.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -301,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Dylan Suvlu</span>
     </a>
   </div>
@@ -312,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about/index.html"> 
+    <a class="nav-link" href="../about/index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -321,29 +284,29 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="./publications.html">
+    <a class="dropdown-item" href="../publications.html">
  <span class="dropdown-text">Publications</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./projects/index.html">
+    <a class="dropdown-item" href="../projects/index.html">
  <span class="dropdown-text">Selected projects</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./software/index.html">
+    <a class="dropdown-item" href="../software/index.html">
  <span class="dropdown-text">Research software</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./talks/index.html">
+    <a class="dropdown-item" href="../talks/index.html">
  <span class="dropdown-text">Talks</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./blog/index.html"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -367,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./blog/index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
+    <a class="nav-link" href="../blog/index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -380,29 +343,39 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dylan Suvlu</h1>
-</div>
+<h1 class="title">Helices in Nanotubes</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">confinement</div>
+    <div class="quarto-category">replica-exchange</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    Research at the intersection of chemistry, physics, biology, and computation.
+    How confinement and the water around it decide whether a peptide folds into a helix.
   </div>
 </div>
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 19, 2021</p>
+    </div>
+  </div>
   
     
   </div>
@@ -412,42 +385,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="home-page">
-<div class="hero">
-<div class="hero-copy">
-<h1 aria-label="Chemistry intersect physics intersect biology intersect computation">
-<span class="set-term">Chemistry</span> <span class="set-op">∩</span> <span class="set-term">Physics</span> <span class="set-op">∩</span> <span class="set-term">Biology</span> <span class="set-op">∩</span> <span class="set-term">Computation</span>
-</h1>
-<p>I use molecular simulation, statistical physics, and machine learning to uncover how microscopic structure shapes macroscopic behavior.</p>
-<div class="hero-actions">
-<p><a href="./publications.html" class="site-button site-button--primary">View publications</a> <a href="./about/index.html" class="site-button site-button--ghost">About my work</a></p>
-</div>
-</div>
-<div class="hero-visual">
-<p><img src="assets/headshot.jpg" class="hero-photo img-fluid" alt="Portrait of Dylan Suvlu"></p>
-</div>
-</div>
-<div class="home-section focus-section">
-<section id="research-focus" class="level2 section-heading">
-<h2 class="anchored" data-anchor-id="research-focus">Research focus</h2>
-<p>Theory, simulation, and data-driven inference for complex molecular systems.</p>
+<p class="interior-lede">
+Replica-exchange simulations of peptides inside carbon nanotubes open to a water reservoir: when does confinement fold a chain into a helix, and what role does the water play?
+</p>
+<figure class="project-figure figure">
+<video controls="" preload="none" playsinline="" width="1000" height="500" poster="../assets/video/helix-coil-remd-poster.jpg" aria-describedby="helix-video-caption">
+<source src="../assets/video/helix-coil-remd.mp4" type="video/mp4">
+</video>
+<figcaption id="helix-video-caption">
+Replica-exchange molecular dynamics of a polyalanine chain in an open carbon nanotube. Top: the temperature one replica visits as it exchanges up and down the ladder (red marks the elapsed trajectory). Bottom: the same replica’s peptide and the water inside the tube, with the chain unravelling when hot and refolding into a helix as it cools.
+</figcaption>
+</figure>
+<section id="the-question" class="level2 content-section">
+<h2 class="anchored" data-anchor-id="the-question">The question</h2>
+<p>Nascent proteins leave the ribosome through a narrow tunnel, and chaperonins fold proteins inside enclosed cavities. Confinement on this scale changes the balance of forces that decides secondary structure, but it also changes the water around the chain. Separating the two effects requires a system where both the pore and the solvent can be controlled.</p>
 </section>
-<div class="focus-grid">
-<section id="interfacial-electrochemistry" class="level3 focus-card">
-<h3 class="anchored" data-anchor-id="interfacial-electrochemistry"><a href="./projects/reaction-field-toolkit.html">Interfacial electrochemistry</a></h3>
-<p>Understanding electric fields, solvent structure, and double-layer behavior at solid–liquid interfaces.</p>
+<section id="the-approach" class="level2 content-section">
+<h2 class="anchored" data-anchor-id="the-approach">The approach</h2>
+<p>Replica-exchange molecular dynamics (GROMACS) of capped polyalanine, polyserine, and polyglutamine in carbon nanotubes open to a water reservoir, mapping helix formation as a function of tube diameter and hydrophobicity. Comparing each system in the gas phase and in water isolates the solvation free-energy difference between the helix and coil states.</p>
 </section>
-<section id="molecular-simulation" class="level3 focus-card">
-<h3 class="anchored" data-anchor-id="molecular-simulation"><a href="./publications.html">Molecular simulation</a></h3>
-<p>Connecting atomistic trajectories to physical models across liquids, polymers, peptides, and nanomaterials.</p>
+<section id="what-we-found" class="level2 content-section">
+<h2 class="anchored" data-anchor-id="what-we-found">What we found</h2>
+<ul>
+<li>A helix forms only within a narrow window of tube diameters, one that is comparable to the width of the ribosome tunnel.</li>
+<li>Inside the tube, helix formation in polyalanine is driven by a small negative enthalpy and a positive entropy change near 300 K, the opposite of bulk water, where a large entropy loss favors the coil.</li>
+<li>Water density inside the tube is anticorrelated with structure formation, and more hydrophobic tubes enhance helicity.</li>
+<li>Confinement stabilizes helices of chains with hydrophobic side chains, consistent with an entropic mechanism from polymer physics. Hydrophilic chains can also form helices, but whether they do depends on the tube through water-mediated interactions.</li>
+</ul>
 </section>
-<section id="data-driven-inference" class="level3 focus-card">
-<h3 class="anchored" data-anchor-id="data-driven-inference"><a href="./projects/madelung-denoising.html">Data-driven inference</a></h3>
-<p>Building Bayesian and machine-learning methods that recover interpretable signals from noisy molecular data.</p>
+<section id="papers" class="level2 content-section">
+<h2 class="anchored" data-anchor-id="papers">Papers</h2>
+<ul>
+<li>D. Suvlu, S. Samaratunga, D. Thirumalai, J. C. Rasaiah. <a href="https://doi.org/10.1021/acs.jpclett.6b02620">Thermodynamics of Helix–Coil Transitions of Polyalanine in Open Carbon Nanotubes</a>. <em>The Journal of Physical Chemistry Letters</em> <strong>8</strong>, 494–499 (2017).</li>
+<li>D. Suvlu, D. Thirumalai, J. C. Rasaiah. <a href="https://doi.org/10.1021/acs.jpcb.0c10178">Water-mediated interactions determine helix formation of peptides in open nanotubes</a>. <em>The Journal of Physical Chemistry B</em> <strong>125</strong>, 817–824 (2021).</li>
+</ul>
 </section>
-</div>
-</div>
-</div>
 
 
 
@@ -889,5 +861,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
