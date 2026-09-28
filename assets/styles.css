@@ -1001,3 +1001,74 @@ body.quarto-dark .hero-photo {
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
+/* Ising 404 (assets/ising.js). The canvas is the lattice at one pixel per
+   spin, scaled up without smoothing so the spins stay crisp squares. */
+
+.ising {
+  margin: 0 0 2.5rem;
+}
+
+.ising canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  cursor: crosshair;
+  /* keep vertical scrolling on touch screens */
+  touch-action: pan-y;
+}
+
+.ising figcaption {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ising-controls {
+  display: flex;
+  flex: none;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.ising-readout {
+  min-width: 4.8rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  transition: color 300ms ease;
+}
+
+.ising-readout[data-phase="disordered"] {
+  color: var(--vermilion);
+}
+
+.ising-reheat {
+  padding: 0.3rem 0.85rem;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+}
+
+.ising-reheat:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+@media (max-width: 620px) {
+  .ising figcaption {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
