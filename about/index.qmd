@@ -50,13 +50,13 @@ Translate ideas between chemistry, physics, biology, and data science without lo
 ::: {.fact-card}
 ### Massachusetts Institute of Technology
 
-Postdoctoral associate since 2020. Research spanning interfacial electric fields, Bayesian inference, molecular simulation, and scientific computing.
+Postdoctoral associate, 2020–2025. Research spanning interfacial electric fields, Bayesian inference, molecular simulation, and scientific computing.
 :::
 
 ::: {.fact-card}
 ### University of Maine
 
-PhD in chemistry (2020), following a BS in chemistry. Doctoral work explored molecular behavior in confined systems and ligand-mediated nanomaterials.
+PhD in physical chemistry (2020), following a BS in chemistry. Doctoral work explored molecular behavior in confined systems and ligand-mediated nanomaterials.
 :::
 :::
 :::

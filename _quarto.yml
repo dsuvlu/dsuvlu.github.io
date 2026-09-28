@@ -1,6 +1,14 @@
 project:
   type: website
   output-dir: _site
+  # Files Quarto's link scan misses: fonts are only referenced from CSS (and
+  # the OFL requires the licence to travel with them); <video poster> is not
+  # an attribute Quarto looks at.
+  resources:
+    - assets/fonts/*.woff2
+    - assets/fonts/OFL-*.txt
+    - assets/video/*
+  post-render: _scripts/post-render.py
 
 website:
   title: "Dylan Suvlu"
@@ -72,8 +80,10 @@ format:
     smooth-scroll: true
     # consumed by _extensions/seo/seo.lua; keep in step with website.site-url
     canonical-base: https://dsuvlu.github.io
+    # Fonts are self-hosted (@font-face in assets/styles.css). Preload the two
+    # latin faces every page paints with so text doesn't flash in a fallback.
+    # Root-absolute paths are fine: this is a user site served from /.
     include-in-header:
       - text: |
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500;600&family=Mulish:wght@400;600;700;800&display=swap">
+          <link rel="preload" href="/assets/fonts/gelasio-latin.woff2" as="font" type="font/woff2" crossorigin>
+          <link rel="preload" href="/assets/fonts/mulish-latin.woff2" as="font" type="font/woff2" crossorigin>

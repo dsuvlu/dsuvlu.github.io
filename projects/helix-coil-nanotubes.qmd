@@ -1,0 +1,43 @@
+---
+title: "Helices in Nanotubes"
+description: "How confinement and the water around it decide whether a peptide folds into a helix."
+date: 2021-01-19
+categories: [confinement, replica-exchange]
+---
+
+<p class="interior-lede">Replica-exchange simulations of peptides inside carbon nanotubes open to a water reservoir: when does confinement fold a chain into a helix, and what role does the water play?</p>
+
+<figure class="project-figure">
+<video controls preload="none" playsinline width="1000" height="500" poster="../assets/video/helix-coil-remd-poster.jpg" aria-describedby="helix-video-caption">
+<source src="../assets/video/helix-coil-remd.mp4" type="video/mp4">
+</video>
+<figcaption id="helix-video-caption">Replica-exchange molecular dynamics of a polyalanine chain in an open carbon nanotube. Top: the temperature one replica visits as it exchanges up and down the ladder (red marks the elapsed trajectory). Bottom: the same replica's peptide and the water inside the tube, with the chain unravelling when hot and refolding into a helix as it cools.</figcaption>
+</figure>
+
+::: {.content-section}
+## The question
+
+Nascent proteins leave the ribosome through a narrow tunnel, and chaperonins fold proteins inside enclosed cavities. Confinement on this scale changes the balance of forces that decides secondary structure, but it also changes the water around the chain. Separating the two effects requires a system where both the pore and the solvent can be controlled.
+:::
+
+::: {.content-section}
+## The approach
+
+Replica-exchange molecular dynamics (GROMACS) of capped polyalanine, polyserine, and polyglutamine in carbon nanotubes open to a water reservoir, mapping helix formation as a function of tube diameter and hydrophobicity. Comparing each system in the gas phase and in water isolates the solvation free-energy difference between the helix and coil states.
+:::
+
+::: {.content-section}
+## What we found
+
+- A helix forms only within a narrow window of tube diameters, one that is comparable to the width of the ribosome tunnel.
+- Inside the tube, helix formation in polyalanine is driven by a small negative enthalpy and a positive entropy change near 300 K, the opposite of bulk water, where a large entropy loss favors the coil.
+- Water density inside the tube is anticorrelated with structure formation, and more hydrophobic tubes enhance helicity.
+- Confinement stabilizes helices of chains with hydrophobic side chains, consistent with an entropic mechanism from polymer physics. Hydrophilic chains can also form helices, but whether they do depends on the tube through water-mediated interactions.
+:::
+
+::: {.content-section}
+## Papers
+
+- D. Suvlu, S. Samaratunga, D. Thirumalai, J. C. Rasaiah. [Thermodynamics of Helix–Coil Transitions of Polyalanine in Open Carbon Nanotubes](https://doi.org/10.1021/acs.jpclett.6b02620). *The Journal of Physical Chemistry Letters* **8**, 494–499 (2017).
+- D. Suvlu, D. Thirumalai, J. C. Rasaiah. [Water-mediated interactions determine helix formation of peptides in open nanotubes](https://doi.org/10.1021/acs.jpcb.0c10178). *The Journal of Physical Chemistry B* **125**, 817–824 (2021).
+:::

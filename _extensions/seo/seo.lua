@@ -46,15 +46,17 @@ function Pandoc(doc)
   "name": "Dylan Suvlu",
   "url": "]] .. site_url .. [[/",
   "email": "mailto:dsuvlu@gmail.com",
-  "jobTitle": "Postdoctoral Associate",
-  "affiliation": {
-    "@type": "Organization",
-    "name": "Massachusetts Institute of Technology"
-  },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "University of Maine"
-  },
+  "jobTitle": "Computational Scientist",
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Massachusetts Institute of Technology"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Maine"
+    }
+  ],
   "knowsAbout": [
     "Computational chemistry",
     "Statistical physics",

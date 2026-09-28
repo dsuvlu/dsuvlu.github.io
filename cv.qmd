@@ -1,18 +1,47 @@
 ---
 title: "CV"
 description: "Research experience, education, awards and funding, and technical skills for Dylan Suvlu."
+# One source, two outputs: this page and /cv.pdf (Typst). The layout divs
+# below are mapped to Typst by _cv/cv-typst.lua; _cv/typst-template.typ
+# holds the PDF styling.
+format:
+  html: default
+  typst:
+    fontsize: 9.5pt
+    font-paths: [assets/fonts/typst]
+    template-partials:
+      - _cv/typst-template.typ
+      - _cv/typst-show.typ
+    filters:
+      - _cv/cv-typst.lua
+# the download card below replaces Quarto's "Other formats" sidebar link
+format-links: false
+cv-name: Dylan Suvlu
+cv-contacts:
+  - text: dsuvlu@gmail.com
+    href: mailto:dsuvlu@gmail.com
+  - text: dsuvlu.github.io
+    href: https://dsuvlu.github.io
+  - text: github.com/dsuvlu
+    href: https://github.com/dsuvlu
+  - text: ORCID 0000-0003-3216-1338
+    href: https://orcid.org/0000-0003-3216-1338
 ---
 
-<p class="interior-lede">Computational scientist working across statistical physics, high-performance molecular simulation, and machine learning. Currently a postdoctoral associate at MIT.</p>
+::: {.interior-lede}
+Computational scientist working across statistical physics, high-performance molecular simulation, and machine learning.
+:::
 
+::: {.content-visible when-format="html"}
 ::: {.download-card}
 ::: {}
 **Curriculum vitae**
 
-PDF · one page
+PDF · generated from this page
 :::
 
-[Download CV](files/cv.pdf){.site-button .site-button--primary target="_blank"}
+[Download CV](cv.pdf){.site-button .site-button--primary target="_blank"}
+:::
 :::
 
 ::: {.content-section}
@@ -20,15 +49,19 @@ PDF · one page
 
 ::: {.cv-entry}
 ::: {.cv-when}
-Sep 2020 — present
+Sep 2020 — Sep 2025
 :::
 ::: {.cv-what}
 ### Postdoctoral Associate
 
 **Massachusetts Institute of Technology** · Cambridge, MA
 
+- Led molecular-dynamics and machine-learning studies of interfacial electrostatics.
 - Designed and implemented GPU-accelerated Bayesian inference models that revealed previously undetected patterns in single-atom interfacial electric-field data.
+- Developed high-performance, GPU-accelerated Julia implementations of Ewald summation and related electrostatics methods.
+- Performed free-energy perturbation and thermodynamic-integration calculations for electron-transfer reactions at nanoparticle and electrode interfaces.
 - Built end-to-end simulation and analytics pipelines that cut compute time roughly tenfold across coarse-grained polymers, polarizable nanoparticles, and interfacial electric-field systems.
+- Standardized reproducible pipelines (Pixi, Docker, CI) that were adopted across projects.
 - Recognized by the chemistry department for mentoring graduate and undergraduate students in research.
 :::
 :::
@@ -42,7 +75,8 @@ Sep 2014 — Aug 2020
 
 **University of Maine** · Orono, ME
 
-- Molecular dynamics and statistical-mechanical studies of water-mediated interactions, helix–coil transitions in confined peptides, and ligand-mediated nanocluster growth.
+- Generated and analyzed ~100 TB of molecular-dynamics data to understand how water-mediated interactions govern helix–coil transitions of peptides confined in carbon nanotubes.
+- Developed kinetic models of ligand-mediated nanocluster formation and growth.
 :::
 :::
 :::
@@ -55,7 +89,7 @@ Sep 2014 — Aug 2020
 2014 — 2020
 :::
 ::: {.cv-what}
-### Ph.D., Chemistry
+### Ph.D., Physical Chemistry
 
 **University of Maine** · Orono, ME
 :::
@@ -92,13 +126,13 @@ Burroughs Wellcome Fund · 2021–2024
 ::: {.fact-card}
 ### Mentorship Spotlight Award
 
-2022
+MIT Department of Chemistry · 2022
 :::
 
 ::: {.fact-card}
 ### Sequoyah Fellow
 
-2016
+American Indian Science and Engineering Society · 2016
 :::
 :::
 :::
@@ -122,19 +156,19 @@ PyTorch, PyMC, scikit-learn, XGBoost
 ::: {.skill-group}
 ### High-performance computing
 
-CUDA, OpenMP, MPI, SLURM
+CUDA, OpenMP, MPI, Numba, SLURM
 :::
 
 ::: {.skill-group}
 ### Molecular simulation
 
-OpenMM, GROMACS, LAMMPS, RDKit
+OpenMM, GROMACS, LAMMPS, HOOMD-blue, RDKit, VMD, PyMOL
 :::
 
 ::: {.skill-group}
-### Infrastructure
+### Data and infrastructure
 
-AWS (S3, Batch), Docker, Git
+NumPy, pandas, Polars, Dask, AWS (S3, Batch), Docker, Pixi, Git
 :::
 :::
 :::
@@ -142,5 +176,11 @@ AWS (S3, Batch), Docker, Git
 ::: {.content-section}
 ## Publications
 
+::: {.content-visible when-format="html"}
 Seven peer-reviewed papers. See the [full list](publications.qmd), or the complete record on [Google Scholar](https://scholar.google.com/citations?user=aLT9gJ0AAAAJ&hl=en) and [ORCID](https://orcid.org/0000-0003-3216-1338).
+:::
+
+::: {.content-visible when-format="typst"}
+{{< include _publications-list.qmd >}}
+:::
 :::

@@ -1,0 +1,93 @@
+<!-- Shared by publications.qmd and the PDF CV (cv.qmd); edit the list here. -->
+
+::: {.pub-list}
+
+::: {.pub-item}
+[2025]{.pub-year}
+
+::: {.pub-body}
+## [Electric Fields at Solid-Liquid Interfaces: Insights from Molecular Dynamics Simulation](https://doi.org/10.1146/annurev-physchem-082820-112101)
+
+J. A. Nauman, [D. Suvlu]{.pub-self}, A. P. Willard
+
+[*Annual Review of Physical Chemistry*]{.pub-venue} **76**, 181–202
+:::
+:::
+
+::: {.pub-item}
+[2024]{.pub-year}
+
+::: {.pub-body}
+## [Water molecules mute the dependence of the double-layer potential profile on ionic strength](https://doi.org/10.1039/D3FD00114H)
+
+A. Limaye^†^, [D. Suvlu]{.pub-self}^†^, A. P. Willard
+
+[*Faraday Discussions*]{.pub-venue} **249**, 267–288
+:::
+:::
+
+::: {.pub-item}
+[2022]{.pub-year}
+
+::: {.pub-body}
+## [Bottlebrush polymers with flexible enantiomeric side chains display differential biological properties](https://doi.org/10.1038/s41557-021-00826-8)
+
+H. V.-T. Nguyen, Y. Jiang, S. Mohapatra, W. Wang, J. C. Barnes, N. J. Oldenhuis, K. K. Chen, S. Axelrod, Z. Huang, Q. Chen, M. R. Golder, K. Young, [D. Suvlu]{.pub-self}, Y. Shen, A. P. Willard, M. J. A. Hore, R. Gómez-Bombarelli, J. A. Johnson
+
+[*Nature Chemistry*]{.pub-venue} **14**, 85–93
+:::
+:::
+
+::: {.pub-item}
+[2021]{.pub-year}
+
+::: {.pub-body}
+## [Water-mediated interactions determine helix formation of peptides in open nanotubes](https://doi.org/10.1021/acs.jpcb.0c10178)
+
+[D. Suvlu]{.pub-self}, D. Thirumalai, J. C. Rasaiah
+
+[*The Journal of Physical Chemistry B*]{.pub-venue} **125**, 817–824
+:::
+:::
+
+::: {.pub-item}
+[2020]{.pub-year}
+
+::: {.pub-body}
+## [Nanocluster Growth and Coalescence Modulated by Ligands](https://doi.org/10.1021/acs.jpcc.0c04459)
+
+[D. Suvlu]{.pub-self}^†^, M. Farshad^†^, J. C. Rasaiah
+
+[*The Journal of Physical Chemistry C*]{.pub-venue} **124**, 17340–17346
+:::
+:::
+
+::: {.pub-item}
+[2019]{.pub-year}
+
+::: {.pub-body}
+## [Ligand-Mediated Nanocluster Formation with Classical and Autocatalytic Growth](https://doi.org/10.1021/acs.jpcc.9b07683)
+
+M. Farshad^†^, [D. Suvlu]{.pub-self}^†^, J. C. Rasaiah
+
+[*The Journal of Physical Chemistry C*]{.pub-venue} **123**, 29954–29963
+:::
+:::
+
+::: {.pub-item}
+[2017]{.pub-year}
+
+::: {.pub-body}
+## [Thermodynamics of Helix–Coil Transitions of Polyalanine in Open Carbon Nanotubes](https://doi.org/10.1021/acs.jpclett.6b02620)
+
+[D. Suvlu]{.pub-self}, S. Samaratunga, D. Thirumalai, J. C. Rasaiah
+
+[*The Journal of Physical Chemistry Letters*]{.pub-venue} **8**, 494–499
+:::
+:::
+
+:::
+
+::: {.pub-footnote}
+^†^ Equal contribution.
+:::
