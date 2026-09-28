@@ -1009,6 +1009,14 @@ body.quarto-dark .hero-photo {
   margin: 0 0 2.5rem;
 }
 
+.ising-section {
+  padding-block: 0 clamp(3rem, 5vw, 4.5rem);
+}
+
+.ising--band {
+  margin: 0;
+}
+
 .ising canvas {
   display: block;
   width: 100%;
