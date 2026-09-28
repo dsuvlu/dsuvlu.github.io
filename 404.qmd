@@ -1,12 +1,11 @@
 ---
 title: "Page not found"
-description: "That page doesn't exist."
 ---
 
 <p class="interior-lede">That page doesn’t exist — it may have moved, or the link may be incomplete.</p>
 
 <!-- Root-absolute script path: this page is served at whatever URL was missing. -->
-<figure class="ising" data-ising data-text="404" hidden>
+<figure class="ising column-page" data-ising data-text="404" data-cells="240x80" data-weight="700" hidden>
 <canvas role="img" aria-label="The number 404 condensing out of a disordered lattice of spins as it cools."></canvas>
 <figcaption>
 <span>A 2D Ising model in a field shaped like the missing page. It starts hot and disordered, then cools below T<sub>c</sub> ≈ 2.27 J/k<sub>B</sub>, where the spins order and the field decides which way. Your cursor is a heat source.</span>

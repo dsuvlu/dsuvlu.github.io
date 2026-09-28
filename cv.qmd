@@ -60,7 +60,7 @@ Sep 2020 — Sep 2025
 - Designed and implemented GPU-accelerated Bayesian inference models that revealed previously undetected patterns in single-atom interfacial electric-field data.
 - Developed high-performance, GPU-accelerated Julia implementations of Ewald summation and related electrostatics methods.
 - Performed free-energy perturbation and thermodynamic-integration calculations for electron-transfer reactions at nanoparticle and electrode interfaces.
-- Built end-to-end simulation and analytics pipelines that cut compute time roughly tenfold across coarse-grained polymers, polarizable nanoparticles, and interfacial electric-field systems.
+- Built end-to-end simulation and analytics pipelines that cut compute time two- to fivefold across coarse-grained polymers, polarizable nanoparticles, and interfacial electric-field systems.
 - Standardized reproducible pipelines (Pixi, Docker, CI) that were adopted across projects.
 - Recognized by the chemistry department for mentoring graduate and undergraduate students in research.
 :::

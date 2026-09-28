@@ -27,6 +27,17 @@ I use molecular simulation, statistical physics, and machine learning to uncover
 :::
 :::
 
+::: {.home-section .ising-section}
+<figure class="ising ising--band" data-ising data-words="CHEMISTRY|PHYSICS|BIOLOGY|COMPUTATION" data-cells="336x64" data-field="0.6" data-hold="5" hidden>
+<canvas role="img" aria-label="A lattice of spins spelling chemistry, physics, biology, and computation in turn, each word condensing out of thermal noise."></canvas>
+<figcaption>
+<span>A 2D Ising model whose external field spells each discipline in turn: <strong data-ising-word></strong>. Hover to heat it; click to melt it.</span>
+<span class="ising-readout" data-ising-readout aria-hidden="true"></span>
+</figcaption>
+</figure>
+<script src="assets/ising.js" defer></script>
+:::
+
 ::: {.home-section .focus-section}
 ::: {.section-heading}
 ## Research focus
