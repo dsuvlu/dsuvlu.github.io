@@ -10,7 +10,190 @@
 <atom:link href="https://dsuvlu.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Working notes on computational chemistry, statistical physics, and scientific computing.</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Sun, 17 Aug 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 29 Sep 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Nucleation you can poke</title>
+  <link>https://dsuvlu.github.io/blog/posts/2026-09-29-ising-nucleation.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>On this site’s home page, the lattice spells one word after another, and every change of word briefly heats the lattice. Without that pulse the old word does not go away. The field under it has reversed, so it is no longer the equilibrium state, but at low temperature it is <em>metastable</em>: nothing local can undo it, because every small change costs more than it gains. Getting out of a metastable state takes a rare, collective event, which is nucleation.</p>
+<section id="the-critical-droplet" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-critical-droplet">The critical droplet</h2>
+<p>Start with every spin pointing down in a field <img src="https://latex.codecogs.com/png.latex?h%20%3E%200"> that favors up. Flipping a roughly circular droplet of radius <img src="https://latex.codecogs.com/png.latex?R"> gains <img src="https://latex.codecogs.com/png.latex?2h"> per spin in the bulk but pays a surface tension <img src="https://latex.codecogs.com/png.latex?%5Csigma"> along its edge. In the continuum approximation of classical nucleation theory,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%20F(R)%20=%202%5Cpi%20R%5C,%5Csigma%20-%202%5Cpi%20h%20R%5E2%20.%0A"></p>
+<p>The surface term wins for small droplets and the bulk term for large ones, so <img src="https://latex.codecogs.com/png.latex?%5CDelta%20F"> has a maximum at the critical radius</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AR%5E*%20=%20%5Cfrac%7B%5Csigma%7D%7B2h%7D,%20%5Cqquad%20%5CDelta%20F%5E*%20=%20%5Cfrac%7B%5Cpi%20%5Csigma%5E2%7D%7B2h%7D.%0A"></p>
+<p>Droplets smaller than <img src="https://latex.codecogs.com/png.latex?R%5E*"> tend to shrink and larger ones tend to grow. For the square-lattice Ising model the surface tension along a lattice axis is known exactly from Onsager’s solution: <img src="https://latex.codecogs.com/png.latex?%5Csigma(T)%20=%202J%20+%20k_BT%20%5Cln%5Ctanh(J/k_BT)">, which falls to zero at <img src="https://latex.codecogs.com/png.latex?T_c">. The widget below uses that value to estimate <img src="https://latex.codecogs.com/png.latex?R%5E*">. It is only a guide: real droplets on a lattice are not circles, and the surface tension depends on the direction of the interface.</p>
+<figure class="ising-nucleation column-page figure" data-ising-nucleation="" hidden="">
+<div class="ising-nucleation-panels">
+<div class="ising-nucleation-lattice">
+<canvas data-panel="lattice" aria-label="A lattice of spins; click to plant a droplet.">
+</canvas>
+
+</div>
+<div class="ising-nucleation-chart">
+<p class="ising-chart-title">
+Magnetization against field
+</p>
+<canvas data-panel="chart" aria-label="Trace of magnetization against applied field; the live values are also given in the readout below the controls.">
+</canvas>
+<div class="ising-tooltip" data-tooltip="" hidden="">
+<strong data-tip-m=""></strong> magnetization<br><strong data-tip-h=""></strong> field
+</div>
+</div>
+</div>
+<div class="ising-lab-controls">
+<label><span>Temperature <i>T</i> =
+<output data-out="temperature">
+</output>
+</span><input type="range" data-control="temperature" min="0.8" max="2.2" step="0.05" value="1.0"></label> <label><span>Field <i>h</i> =
+<output data-out="field">
+</output>
+</span><input type="range" data-control="field" min="-0.8" max="0.8" step="0.01" value="0.2"></label> <label><span>Droplet radius =
+<output data-out="radius">
+</output>
+<p><input type="range" data-control="radius" min="1" max="15" step="1" value="6"> <button type="button" class="ising-button" data-control="play" aria-pressed="true">Pause</button> <button type="button" class="ising-button" data-control="sweep" aria-pressed="false">Sweep field</button> <button type="button" class="ising-button" data-control="reset">Reset against field</button></p>
+</span></label></div>
+<figcaption>
+Click the lattice to plant a droplet aligned with the field. Magnetization <i>m</i> =
+<output data-out="m">
+</output>
+· classical estimate <i>R</i>* ≈
+<output data-out="rstar">
+</output>
+cells.
+</figcaption>
+</figure>
+<script type="module" src="../../assets/ising-nucleation.js"></script>
+</section>
+<section id="things-to-try" class="level2">
+<h2 class="anchored" data-anchor-id="things-to-try">Things to try</h2>
+<ul>
+<li><strong>Plant droplets on either side of <img src="https://latex.codecogs.com/png.latex?R%5E*">.</strong> At the default <img src="https://latex.codecogs.com/png.latex?T%20=%201"> and <img src="https://latex.codecogs.com/png.latex?h%20=%200.2"> the estimate is 4.3 cells, and the lattice agrees surprisingly well: in my runs, droplets of radius 4 or less melted back and droplets of radius 5 or more grew. Watch a growing droplet and it turns into a rounded square, the lattice anisotropy that the circular estimate ignores.</li>
+<li><strong>Just wait.</strong> At <img src="https://latex.codecogs.com/png.latex?T%20=%201">, <img src="https://latex.codecogs.com/png.latex?h%20=%200.2"> the barrier is about <img src="https://latex.codecogs.com/png.latex?23%5C,J">, so spontaneous nucleation essentially never happens on this lattice. Raise <img src="https://latex.codecogs.com/png.latex?h"> or <img src="https://latex.codecogs.com/png.latex?T"> and the barrier drops quickly; at <img src="https://latex.codecogs.com/png.latex?T%20=%201">, somewhere between <img src="https://latex.codecogs.com/png.latex?h%20=%200.5"> and <img src="https://latex.codecogs.com/png.latex?0.6">, droplets start appearing on their own within seconds.</li>
+<li><strong>Sweep the field.</strong> The magnetization lags behind the field and traces a hysteresis loop, switching only once the field is strong enough for nucleation to happen on the timescale of the sweep. The loop is not a property of the material alone: it depends on how fast the field moves compared to how long nucleation takes.</li>
+<li><strong>Heat toward <img src="https://latex.codecogs.com/png.latex?T_c">.</strong> The surface tension vanishes, <img src="https://latex.codecogs.com/png.latex?R%5E*"> collapses, and the loop closes.</li>
+</ul>
+<p>Classical nucleation theory, with a critical nucleus set by the competition between surface and bulk free energy, is also the usual starting point for real clusters. That includes the ligand-mediated nanocluster growth in two of my papers (<a href="https://doi.org/10.1021/acs.jpcc.9b07683">2019</a>, <a href="https://doi.org/10.1021/acs.jpcc.0c04459">2020</a>). This lattice is about the simplest system where you can watch the same idea play out spin by spin.</p>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li>L. Onsager, <a href="https://doi.org/10.1103/PhysRev.65.117">Crystal statistics. I. A two-dimensional model with an order–disorder transition</a>, <em>Phys. Rev.</em> <strong>65</strong>, 117–149 (1944).</li>
+<li>P. A. Rikvold, H. Tomita, S. Miyashita, and S. W. Sides, <a href="https://doi.org/10.1103/PhysRevE.49.5080">Metastable lifetimes in a kinetic Ising model: Dependence on field and system size</a>, <em>Phys. Rev.&nbsp;E</em> <strong>49</strong>, 5080–5090 (1994).</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>statistical-physics</category>
+  <category>nucleation</category>
+  <guid>https://dsuvlu.github.io/blog/posts/2026-09-29-ising-nucleation.html</guid>
+  <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>The 404 page is doing Bayesian inference</title>
+  <link>https://dsuvlu.github.io/blog/posts/2026-09-29-ising-inference.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>The spins on this site’s <a href="../../this-page-does-not-exist">404 page</a> and home page are a biased Ising model. An external field shaped like the text pushes spins up inside the glyphs and down outside them, and the lattice is cooled until the pattern condenses out of thermal noise. The same equations, read differently, are one of the classic methods for restoring noisy images.</p>
+<section id="prior-likelihood-posterior" class="level2">
+<h2 class="anchored" data-anchor-id="prior-likelihood-posterior">Prior, likelihood, posterior</h2>
+<p>Take a binary picture <img src="https://latex.codecogs.com/png.latex?x">, one value <img src="https://latex.codecogs.com/png.latex?x_i%20=%20%5Cpm%201"> per pixel. A reasonable prior belief about pictures is that neighboring pixels tend to agree, which is exactly what an Ising model says:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ap(x)%20%5Cpropto%20%5Cexp%5CBig(%20J%20%5Csum_%7B%5Clangle%20ij%20%5Crangle%7D%20x_i%20x_j%20%5CBig).%0A"></p>
+<p>Now observe the picture through a noisy channel that flips each pixel independently with probability <img src="https://latex.codecogs.com/png.latex?p">. For one pixel, <img src="https://latex.codecogs.com/png.latex?p(y_i%20%5Cmid%20x_i)"> is <img src="https://latex.codecogs.com/png.latex?1-p"> if <img src="https://latex.codecogs.com/png.latex?y_i%20=%20x_i"> and <img src="https://latex.codecogs.com/png.latex?p"> otherwise, which can be written as</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ap(y_i%20%5Cmid%20x_i)%20%5Cpropto%20%5Cexp%5Cbig(%20h%20%5C,%20x_i%20y_i%20%5Cbig),%20%5Cqquad%20h%20=%20%5Ctfrac%7B1%7D%7B2%7D%20%5Cln%20%5Cfrac%7B1-p%7D%7Bp%7D.%0A"></p>
+<p>Bayes’ rule multiplies the two:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ap(x%20%5Cmid%20y)%20%5Cpropto%20%5Cexp%5CBig(%20J%20%5Csum_%7B%5Clangle%20ij%20%5Crangle%7D%20x_i%20x_j%20+%20%5Csum_i%20h_i%20x_i%20%5CBig),%20%5Cqquad%20h_i%20=%20h%20%5C,%20y_i.%0A"></p>
+<p>That is a biased Ising model at <img src="https://latex.codecogs.com/png.latex?k_B%20T%20=%201">. The coupling is the prior, and <strong>the external field is the data</strong>: each observed pixel pulls its spin toward what was seen, with a strength set by how much the channel can be trusted.</p>
+</section>
+<section id="gibbs-sampling-a-picture-of-gibbs" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="gibbs-sampling-a-picture-of-gibbs">Gibbs sampling a picture of Gibbs</h2>
+<p>To draw samples from this posterior, visit each pixel in turn and set it from its conditional distribution given its neighbors,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(x_i%20=%20+1%20%5Cmid%20%5Ctext%7Brest%7D)%20=%20%5Cfrac%7B1%7D%7B1%20+%20%5Cexp%5C!%5Cbig%5B-2%5Cbig(J%20%5Csum_%7Bj%20%5Cin%20%5Cpartial%20i%7D%20x_j%20+%20h_i%5Cbig)%5Cbig%5D%7D.%0A"></p>
+<p>Physicists call this heat-bath dynamics. Geman and Geman, who introduced this approach to image restoration in 1984, called it the <em>Gibbs sampler</em>, after the Gibbs distribution it samples. So the default picture below is Gibbs himself.</p>
+<p>The hidden picture is binarized (for the portraits, with a little edge enhancement so they read as pen sketches rather than silhouettes), flipped at random to make the observation, and then sampled from the posterior. The last panel averages the samples; its sign at each pixel is the estimate that minimizes the expected number of wrong pixels.</p>
+<figure class="ising-lab column-page figure" data-ising-denoise="" hidden="">
+<div class="ising-lab-panels">
+<div class="ising-lab-panel">
+<canvas data-panel="truth" aria-label="The hidden binary picture.">
+</canvas>
+<p>
+<strong>Truth</strong> · hidden from the sampler
+</p>
+</div>
+<div class="ising-lab-panel">
+<canvas data-panel="data" aria-label="The noisy observation.">
+</canvas>
+<p>
+<strong>Observation</strong> · <span data-out="data-error"></span> wrong
+</p>
+</div>
+<div class="ising-lab-panel">
+<canvas data-panel="sample" aria-label="The current posterior sample.">
+</canvas>
+<p>
+<strong>Current sample</strong>
+</p>
+</div>
+<div class="ising-lab-panel">
+<canvas data-panel="mean" aria-label="The running posterior mean.">
+</canvas>
+<p>
+<strong>Posterior mean</strong> · <span data-out="mean-error"></span> wrong · <span data-out="sweeps"></span> sweeps
+</p>
+</div>
+</div>
+<div class="ising-lab-controls">
+<label><span>Picture</span><select data-control="target"><option value="gibbs">J. W. Gibbs</option><option value="boltzmann">L. Boltzmann</option><option value="helix">A frame from my helix–coil simulation</option></select></label> <label><span>Flip probability <i>p</i> =
+<output data-out="noise">
+</output>
+</span><input type="range" data-control="noise" min="0.02" max="0.48" step="0.01" value="0.2"></label> <label><span>Prior coupling <i>J</i> =
+<output data-out="coupling">
+</output>
+<p><input type="range" data-control="coupling" min="0" max="1.5" step="0.01" value="0.5"> <button type="button" class="ising-button" data-control="resample">New noise</button></p>
+</span></label></div>
+</figure>
+<script type="module" src="../../assets/ising-denoise.js"></script>
+</section>
+<section id="things-to-try" class="level2">
+<h2 class="anchored" data-anchor-id="things-to-try">Things to try</h2>
+<ul>
+<li><strong>Set <img src="https://latex.codecogs.com/png.latex?J%20=%200">.</strong> The prior disappears and every pixel is on its own. The posterior mean just agrees with the observation, so the error equals the flip probability.</li>
+<li><strong>Raise <img src="https://latex.codecogs.com/png.latex?J"> slowly.</strong> Neighbors start voting, isolated flips get outvoted, and the error drops well below <img src="https://latex.codecogs.com/png.latex?p">.</li>
+<li><strong>Keep going past <img src="https://latex.codecogs.com/png.latex?J%20%5Capprox%200.44">.</strong> That is <img src="https://latex.codecogs.com/png.latex?%5Ctfrac%7B1%7D%7B2%7D%5Cln(1+%5Csqrt%7B2%7D)">, the critical coupling of the two-dimensional Ising model, beyond which the prior on its own would order the whole lattice. The best reconstructions sit just above it, around <img src="https://latex.codecogs.com/png.latex?J%20%5Capprox%200.5">. Push further and the prior starts erasing real detail (eyes, glasses, beard texture, the water around the helix) and the error climbs again.</li>
+<li><strong>Push <img src="https://latex.codecogs.com/png.latex?p"> toward 0.5.</strong> The field <img src="https://latex.codecogs.com/png.latex?h"> goes to zero, the data stop carrying information, and the posterior relaxes back to the prior.</li>
+</ul>
+<p>The trade-off in the third item has a physical reading I ran into while tuning the lattice on the 404 page. A feature survives only if the field energy it gains outweighs the domain-wall energy it costs: a stroke has to be wider than about <img src="https://latex.codecogs.com/png.latex?2J/h"> pixels, and a hole enclosed by a stroke needs an area-to-perimeter ratio above about <img src="https://latex.codecogs.com/png.latex?J/h">. In the statistical reading, the same inequality says how much evidence a small feature needs before the prior stops smoothing it away. That is a bias–variance trade-off in a physicist’s vocabulary.</p>
+<p>The same question, of how much structure to assume and what it costs you, comes up whenever physics is recovered from noisy data, as in <a href="../../projects/madelung-denoising.html">denoising single-atom potentials</a>.</p>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li>S. Geman and D. Geman, <a href="https://doi.org/10.1109/TPAMI.1984.4767596">Stochastic relaxation, Gibbs distributions, and the Bayesian restoration of images</a>, <em>IEEE Trans. Pattern Anal. Mach. Intell.</em> <strong>6</strong>, 721–741 (1984).</li>
+<li>J. Besag, <a href="https://doi.org/10.1111/j.2517-6161.1986.tb01412.x">On the statistical analysis of dirty pictures</a>, <em>J. R. Stat. Soc. B</em> <strong>48</strong>, 259–279 (1986). Introduces iterated conditional modes, a fast deterministic alternative to sampling.</li>
+<li>D. M. Greig, B. T. Porteous, and A. H. Seheult, <a href="https://doi.org/10.1111/j.2517-6161.1989.tb01764.x">Exact maximum a posteriori estimation for binary images</a>, <em>J. R. Stat. Soc. B</em> <strong>51</strong>, 271–279 (1989). Shows the most probable image can be found exactly with a minimum cut.</li>
+</ul>
+<p><em>Portraits of J. Willard Gibbs (before 1903) and Ludwig Boltzmann (1902) are in the public domain, via Wikimedia Commons. The helix frame is from the replica-exchange simulations described on the <a href="../../projects/helix-coil-nanotubes.html">helix–coil project page</a>.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>statistical-physics</category>
+  <category>inference</category>
+  <guid>https://dsuvlu.github.io/blog/posts/2026-09-29-ising-inference.html</guid>
+  <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>A place for working notes</title>
   <link>https://dsuvlu.github.io/blog/posts/2025-08-17-hello.html</link>

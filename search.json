@@ -105,6 +105,41 @@
     "text": "Code\nPublic code lives on my GitHub profile, including analysis tools and models that accompany the published work. Packaged releases and documentation will be linked here as they stabilize."
   },
   {
+    "objectID": "blog/posts/2026-09-29-ising-inference.html",
+    "href": "blog/posts/2026-09-29-ising-inference.html",
+    "title": "The 404 page is doing Bayesian inference",
+    "section": "",
+    "text": "The spins on this site’s 404 page and home page are a biased Ising model. An external field shaped like the text pushes spins up inside the glyphs and down outside them, and the lattice is cooled until the pattern condenses out of thermal noise. The same equations, read differently, are one of the classic methods for restoring noisy images."
+  },
+  {
+    "objectID": "blog/posts/2026-09-29-ising-inference.html#prior-likelihood-posterior",
+    "href": "blog/posts/2026-09-29-ising-inference.html#prior-likelihood-posterior",
+    "title": "The 404 page is doing Bayesian inference",
+    "section": "Prior, likelihood, posterior",
+    "text": "Prior, likelihood, posterior\nTake a binary picture \\(x\\), one value \\(x_i = \\pm 1\\) per pixel. A reasonable prior belief about pictures is that neighboring pixels tend to agree, which is exactly what an Ising model says:\n\\[\np(x) \\propto \\exp\\Big( J \\sum_{\\langle ij \\rangle} x_i x_j \\Big).\n\\]\nNow observe the picture through a noisy channel that flips each pixel independently with probability \\(p\\). For one pixel, \\(p(y_i \\mid x_i)\\) is \\(1-p\\) if \\(y_i = x_i\\) and \\(p\\) otherwise, which can be written as\n\\[\np(y_i \\mid x_i) \\propto \\exp\\big( h \\, x_i y_i \\big), \\qquad h = \\tfrac{1}{2} \\ln \\frac{1-p}{p}.\n\\]\nBayes’ rule multiplies the two:\n\\[\np(x \\mid y) \\propto \\exp\\Big( J \\sum_{\\langle ij \\rangle} x_i x_j + \\sum_i h_i x_i \\Big), \\qquad h_i = h \\, y_i.\n\\]\nThat is a biased Ising model at \\(k_B T = 1\\). The coupling is the prior, and the external field is the data: each observed pixel pulls its spin toward what was seen, with a strength set by how much the channel can be trusted."
+  },
+  {
+    "objectID": "blog/posts/2026-09-29-ising-inference.html#gibbs-sampling-a-picture-of-gibbs",
+    "href": "blog/posts/2026-09-29-ising-inference.html#gibbs-sampling-a-picture-of-gibbs",
+    "title": "The 404 page is doing Bayesian inference",
+    "section": "Gibbs sampling a picture of Gibbs",
+    "text": "Gibbs sampling a picture of Gibbs\nTo draw samples from this posterior, visit each pixel in turn and set it from its conditional distribution given its neighbors,\n\\[\nP(x_i = +1 \\mid \\text{rest}) = \\frac{1}{1 + \\exp\\!\\big[-2\\big(J \\sum_{j \\in \\partial i} x_j + h_i\\big)\\big]}.\n\\]\nPhysicists call this heat-bath dynamics. Geman and Geman, who introduced this approach to image restoration in 1984, called it the Gibbs sampler, after the Gibbs distribution it samples. So the default picture below is Gibbs himself.\nThe hidden picture is binarized (for the portraits, with a little edge enhancement so they read as pen sketches rather than silhouettes), flipped at random to make the observation, and then sampled from the posterior. The last panel averages the samples; its sign at each pixel is the estimate that minimizes the expected number of wrong pixels.\n\n\n\n\n\n\nTruth · hidden from the sampler\n\n\n\n\n\n\nObservation ·  wrong\n\n\n\n\n\n\nCurrent sample\n\n\n\n\n\n\nPosterior mean ·  wrong ·  sweeps\n\n\n\n\nPictureJ. W. GibbsL. BoltzmannA frame from my helix–coil simulation Flip probability p =\n\n\n Prior coupling J =\n\n\n New noise"
+  },
+  {
+    "objectID": "blog/posts/2026-09-29-ising-inference.html#things-to-try",
+    "href": "blog/posts/2026-09-29-ising-inference.html#things-to-try",
+    "title": "The 404 page is doing Bayesian inference",
+    "section": "Things to try",
+    "text": "Things to try\n\nSet \\(J = 0\\). The prior disappears and every pixel is on its own. The posterior mean just agrees with the observation, so the error equals the flip probability.\nRaise \\(J\\) slowly. Neighbors start voting, isolated flips get outvoted, and the error drops well below \\(p\\).\nKeep going past \\(J \\approx 0.44\\). That is \\(\\tfrac{1}{2}\\ln(1+\\sqrt{2})\\), the critical coupling of the two-dimensional Ising model, beyond which the prior on its own would order the whole lattice. The best reconstructions sit just above it, around \\(J \\approx 0.5\\). Push further and the prior starts erasing real detail (eyes, glasses, beard texture, the water around the helix) and the error climbs again.\nPush \\(p\\) toward 0.5. The field \\(h\\) goes to zero, the data stop carrying information, and the posterior relaxes back to the prior.\n\nThe trade-off in the third item has a physical reading I ran into while tuning the lattice on the 404 page. A feature survives only if the field energy it gains outweighs the domain-wall energy it costs: a stroke has to be wider than about \\(2J/h\\) pixels, and a hole enclosed by a stroke needs an area-to-perimeter ratio above about \\(J/h\\). In the statistical reading, the same inequality says how much evidence a small feature needs before the prior stops smoothing it away. That is a bias–variance trade-off in a physicist’s vocabulary.\nThe same question, of how much structure to assume and what it costs you, comes up whenever physics is recovered from noisy data, as in denoising single-atom potentials."
+  },
+  {
+    "objectID": "blog/posts/2026-09-29-ising-inference.html#further-reading",
+    "href": "blog/posts/2026-09-29-ising-inference.html#further-reading",
+    "title": "The 404 page is doing Bayesian inference",
+    "section": "Further reading",
+    "text": "Further reading\n\nS. Geman and D. Geman, Stochastic relaxation, Gibbs distributions, and the Bayesian restoration of images, IEEE Trans. Pattern Anal. Mach. Intell. 6, 721–741 (1984).\nJ. Besag, On the statistical analysis of dirty pictures, J. R. Stat. Soc. B 48, 259–279 (1986). Introduces iterated conditional modes, a fast deterministic alternative to sampling.\nD. M. Greig, B. T. Porteous, and A. H. Seheult, Exact maximum a posteriori estimation for binary images, J. R. Stat. Soc. B 51, 271–279 (1989). Shows the most probable image can be found exactly with a minimum cut.\n\nPortraits of J. Willard Gibbs (before 1903) and Ludwig Boltzmann (1902) are in the public domain, via Wikimedia Commons. The helix frame is from the replica-exchange simulations described on the helix–coil project page."
+  },
+  {
     "objectID": "blog/posts/2025-08-17-hello.html",
     "href": "blog/posts/2025-08-17-hello.html",
     "title": "A place for working notes",
@@ -116,7 +151,35 @@
     "href": "blog/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Short pieces about methods, papers, references, and computational experiments that do not fit neatly into a research article.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA place for working notes\n\n\n\nmeta\n\n\n\nWhy this site includes a space for methods, references, and unfinished technical ideas.\n\n\n\n\n\nAug 17, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Short pieces about methods, papers, references, and computational experiments that do not fit neatly into a research article.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNucleation you can poke\n\n\n\nstatistical-physics\n\nnucleation\n\n\n\nMetastability, critical droplets, and hysteresis in a lattice you can plant droplets into.\n\n\n\n\n\nSep 29, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nThe 404 page is doing Bayesian inference\n\n\n\nstatistical-physics\n\ninference\n\n\n\nGibbs-sampling a picture of Gibbs: the Ising model on this site, read as a posterior over noisy images.\n\n\n\n\n\nSep 29, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nA place for working notes\n\n\n\nmeta\n\n\n\nWhy this site includes a space for methods, references, and unfinished technical ideas.\n\n\n\n\n\nAug 17, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/posts/2026-09-29-ising-nucleation.html",
+    "href": "blog/posts/2026-09-29-ising-nucleation.html",
+    "title": "Nucleation you can poke",
+    "section": "",
+    "text": "On this site’s home page, the lattice spells one word after another, and every change of word briefly heats the lattice. Without that pulse the old word does not go away. The field under it has reversed, so it is no longer the equilibrium state, but at low temperature it is metastable: nothing local can undo it, because every small change costs more than it gains. Getting out of a metastable state takes a rare, collective event, which is nucleation."
+  },
+  {
+    "objectID": "blog/posts/2026-09-29-ising-nucleation.html#the-critical-droplet",
+    "href": "blog/posts/2026-09-29-ising-nucleation.html#the-critical-droplet",
+    "title": "Nucleation you can poke",
+    "section": "The critical droplet",
+    "text": "The critical droplet\nStart with every spin pointing down in a field \\(h &gt; 0\\) that favors up. Flipping a roughly circular droplet of radius \\(R\\) gains \\(2h\\) per spin in the bulk but pays a surface tension \\(\\sigma\\) along its edge. In the continuum approximation of classical nucleation theory,\n\\[\n\\Delta F(R) = 2\\pi R\\,\\sigma - 2\\pi h R^2 .\n\\]\nThe surface term wins for small droplets and the bulk term for large ones, so \\(\\Delta F\\) has a maximum at the critical radius\n\\[\nR^* = \\frac{\\sigma}{2h}, \\qquad \\Delta F^* = \\frac{\\pi \\sigma^2}{2h}.\n\\]\nDroplets smaller than \\(R^*\\) tend to shrink and larger ones tend to grow. For the square-lattice Ising model the surface tension along a lattice axis is known exactly from Onsager’s solution: \\(\\sigma(T) = 2J + k_BT \\ln\\tanh(J/k_BT)\\), which falls to zero at \\(T_c\\). The widget below uses that value to estimate \\(R^*\\). It is only a guide: real droplets on a lattice are not circles, and the surface tension depends on the direction of the interface.\n\n\n\n\n\n\n\n\n\n\nMagnetization against field\n\n\n\n\n magnetization field\n\n\n\n\nTemperature T =\n\n\n Field h =\n\n\n Droplet radius =\n\n\n Pause Sweep field Reset against field\n\n\nClick the lattice to plant a droplet aligned with the field. Magnetization m =\n\n\n· classical estimate R* ≈\n\n\ncells."
+  },
+  {
+    "objectID": "blog/posts/2026-09-29-ising-nucleation.html#things-to-try",
+    "href": "blog/posts/2026-09-29-ising-nucleation.html#things-to-try",
+    "title": "Nucleation you can poke",
+    "section": "Things to try",
+    "text": "Things to try\n\nPlant droplets on either side of \\(R^*\\). At the default \\(T = 1\\) and \\(h = 0.2\\) the estimate is 4.3 cells, and the lattice agrees surprisingly well: in my runs, droplets of radius 4 or less melted back and droplets of radius 5 or more grew. Watch a growing droplet and it turns into a rounded square, the lattice anisotropy that the circular estimate ignores.\nJust wait. At \\(T = 1\\), \\(h = 0.2\\) the barrier is about \\(23\\,J\\), so spontaneous nucleation essentially never happens on this lattice. Raise \\(h\\) or \\(T\\) and the barrier drops quickly; at \\(T = 1\\), somewhere between \\(h = 0.5\\) and \\(0.6\\), droplets start appearing on their own within seconds.\nSweep the field. The magnetization lags behind the field and traces a hysteresis loop, switching only once the field is strong enough for nucleation to happen on the timescale of the sweep. The loop is not a property of the material alone: it depends on how fast the field moves compared to how long nucleation takes.\nHeat toward \\(T_c\\). The surface tension vanishes, \\(R^*\\) collapses, and the loop closes.\n\nClassical nucleation theory, with a critical nucleus set by the competition between surface and bulk free energy, is also the usual starting point for real clusters. That includes the ligand-mediated nanocluster growth in two of my papers (2019, 2020). This lattice is about the simplest system where you can watch the same idea play out spin by spin."
+  },
+  {
+    "objectID": "blog/posts/2026-09-29-ising-nucleation.html#further-reading",
+    "href": "blog/posts/2026-09-29-ising-nucleation.html#further-reading",
+    "title": "Nucleation you can poke",
+    "section": "Further reading",
+    "text": "Further reading\n\nL. Onsager, Crystal statistics. I. A two-dimensional model with an order–disorder transition, Phys. Rev. 65, 117–149 (1944).\nP. A. Rikvold, H. Tomita, S. Miyashita, and S. W. Sides, Metastable lifetimes in a kinetic Ising model: Dependence on field and system size, Phys. Rev. E 49, 5080–5090 (1994)."
   },
   {
     "objectID": "cv.html",

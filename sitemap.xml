@@ -2,50 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dsuvlu.github.io/projects/madelung-denoising.html</loc>
-    <lastmod>2026-09-28T20:05:18.356Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.930Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/projects/</loc>
-    <lastmod>2026-09-28T20:05:18.356Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.930Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/about/</loc>
-    <lastmod>2026-09-28T20:05:18.339Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.915Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/talks/</loc>
-    <lastmod>2026-09-28T20:05:18.356Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.930Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/software/</loc>
-    <lastmod>2026-09-28T20:05:18.356Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.930Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dsuvlu.github.io/blog/posts/2026-09-29-ising-inference.html</loc>
+    <lastmod>2026-09-29T13:18:15.929Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/blog/posts/2025-08-17-hello.html</loc>
-    <lastmod>2026-09-28T20:05:18.355Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.929Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/blog/</loc>
-    <lastmod>2026-09-28T20:05:18.355Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dsuvlu.github.io/blog/posts/2026-09-29-ising-nucleation.html</loc>
+    <lastmod>2026-09-29T13:18:15.929Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/cv.html</loc>
-    <lastmod>2026-09-28T20:05:18.355Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.929Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/</loc>
-    <lastmod>2026-09-28T20:05:18.355Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.929Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/publications.html</loc>
-    <lastmod>2026-09-28T20:05:18.356Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.930Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/projects/reaction-field-toolkit.html</loc>
-    <lastmod>2026-09-28T20:05:18.356Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.930Z</lastmod>
   </url>
   <url>
     <loc>https://dsuvlu.github.io/projects/helix-coil-nanotubes.html</loc>
-    <lastmod>2026-09-28T20:05:18.355Z</lastmod>
+    <lastmod>2026-09-29T13:18:15.929Z</lastmod>
   </url>
 </urlset>
