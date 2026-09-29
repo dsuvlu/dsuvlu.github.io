@@ -13,7 +13,7 @@ title: "Page not found"
 </figcaption>
 </figure>
 
-<script src="/assets/ising.js" defer></script>
+<script type="module" src="/assets/ising.js"></script>
 
 ::: {.content-section}
 Try the [publications](publications.qmd), a [selected project](projects/index.qmd), or the [notes](blog/index.qmd). If you followed a link from elsewhere and it should work, [let me know](mailto:dsuvlu@gmail.com).

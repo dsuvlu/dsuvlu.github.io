@@ -1,0 +1,9 @@
+Both images are public domain (Wikimedia Commons), cropped to 4:5 and
+converted to greyscale for the Ising widgets.
+
+boltzmann.jpg  Ludwig Boltzmann, 1902, photographer unknown.
+               https://commons.wikimedia.org/wiki/File:Boltzmann2.jpg
+
+gibbs.jpg      J. Willard Gibbs, before 1903, photographer unknown. Frontispiece
+               of The Scientific Papers of J. Willard Gibbs (Longmans, Green, 1906).
+               https://commons.wikimedia.org/wiki/File:Josiah_Willard_Gibbs_-from_MMS-.jpg

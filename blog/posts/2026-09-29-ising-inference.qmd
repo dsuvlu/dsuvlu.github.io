@@ -1,0 +1,78 @@
+---
+title: "The 404 page is doing Bayesian inference"
+description: "Gibbs-sampling a picture of Gibbs: the Ising model on this site, read as a posterior over noisy images."
+date: 2026-09-29
+categories: [statistical-physics, inference]
+---
+
+The spins on this site's [404 page](/this-page-does-not-exist) and home page are a biased Ising model. An external field shaped like the text pushes spins up inside the glyphs and down outside them, and the lattice is cooled until the pattern condenses out of thermal noise. The same equations, read differently, are one of the classic methods for restoring noisy images.
+
+## Prior, likelihood, posterior
+
+Take a binary picture $x$, one value $x_i = \pm 1$ per pixel. A reasonable prior belief about pictures is that neighboring pixels tend to agree, which is exactly what an Ising model says:
+
+$$
+p(x) \propto \exp\Big( J \sum_{\langle ij \rangle} x_i x_j \Big).
+$$
+
+Now observe the picture through a noisy channel that flips each pixel independently with probability $p$. For one pixel, $p(y_i \mid x_i)$ is $1-p$ if $y_i = x_i$ and $p$ otherwise, which can be written as
+
+$$
+p(y_i \mid x_i) \propto \exp\big( h \, x_i y_i \big), \qquad h = \tfrac{1}{2} \ln \frac{1-p}{p}.
+$$
+
+Bayes' rule multiplies the two:
+
+$$
+p(x \mid y) \propto \exp\Big( J \sum_{\langle ij \rangle} x_i x_j + \sum_i h_i x_i \Big), \qquad h_i = h \, y_i.
+$$
+
+That is a biased Ising model at $k_B T = 1$. The coupling is the prior, and **the external field is the data**: each observed pixel pulls its spin toward what was seen, with a strength set by how much the channel can be trusted.
+
+## Gibbs sampling a picture of Gibbs
+
+To draw samples from this posterior, visit each pixel in turn and set it from its conditional distribution given its neighbors,
+
+$$
+P(x_i = +1 \mid \text{rest}) = \frac{1}{1 + \exp\!\big[-2\big(J \sum_{j \in \partial i} x_j + h_i\big)\big]}.
+$$
+
+Physicists call this heat-bath dynamics. Geman and Geman, who introduced this approach to image restoration in 1984, called it the *Gibbs sampler*, after the Gibbs distribution it samples. So the default picture below is Gibbs himself.
+
+The hidden picture is binarized (for the portraits, with a little edge enhancement so they read as pen sketches rather than silhouettes), flipped at random to make the observation, and then sampled from the posterior. The last panel averages the samples; its sign at each pixel is the estimate that minimizes the expected number of wrong pixels.
+
+<figure class="ising-lab column-page" data-ising-denoise hidden>
+<div class="ising-lab-panels">
+<div class="ising-lab-panel"><canvas data-panel="truth" role="img" aria-label="The hidden binary picture."></canvas><p><strong>Truth</strong> · hidden from the sampler</p></div>
+<div class="ising-lab-panel"><canvas data-panel="data" role="img" aria-label="The noisy observation."></canvas><p><strong>Observation</strong> · <span data-out="data-error"></span> wrong</p></div>
+<div class="ising-lab-panel"><canvas data-panel="sample" role="img" aria-label="The current posterior sample."></canvas><p><strong>Current sample</strong></p></div>
+<div class="ising-lab-panel"><canvas data-panel="mean" role="img" aria-label="The running posterior mean."></canvas><p><strong>Posterior mean</strong> · <span data-out="mean-error"></span> wrong · <span data-out="sweeps"></span> sweeps</p></div>
+</div>
+<div class="ising-lab-controls">
+<label><span>Picture</span><select data-control="target"><option value="gibbs">J. W. Gibbs</option><option value="boltzmann">L. Boltzmann</option><option value="helix">A frame from my helix–coil simulation</option></select></label>
+<label><span>Flip probability <i>p</i> = <output data-out="noise"></output></span><input type="range" data-control="noise" min="0.02" max="0.48" step="0.01" value="0.2"></label>
+<label><span>Prior coupling <i>J</i> = <output data-out="coupling"></output></span><input type="range" data-control="coupling" min="0" max="1.5" step="0.01" value="0.5"></label>
+<button type="button" class="ising-button" data-control="resample">New noise</button>
+</div>
+</figure>
+
+<script type="module" src="../../assets/ising-denoise.js"></script>
+
+## Things to try
+
+- **Set $J = 0$.** The prior disappears and every pixel is on its own. The posterior mean just agrees with the observation, so the error equals the flip probability.
+- **Raise $J$ slowly.** Neighbors start voting, isolated flips get outvoted, and the error drops well below $p$.
+- **Keep going past $J \approx 0.44$.** That is $\tfrac{1}{2}\ln(1+\sqrt{2})$, the critical coupling of the two-dimensional Ising model, beyond which the prior on its own would order the whole lattice. The best reconstructions sit just above it, around $J \approx 0.5$. Push further and the prior starts erasing real detail (eyes, glasses, beard texture, the water around the helix) and the error climbs again.
+- **Push $p$ toward 0.5.** The field $h$ goes to zero, the data stop carrying information, and the posterior relaxes back to the prior.
+
+The trade-off in the third item has a physical reading I ran into while tuning the lattice on the 404 page. A feature survives only if the field energy it gains outweighs the domain-wall energy it costs: a stroke has to be wider than about $2J/h$ pixels, and a hole enclosed by a stroke needs an area-to-perimeter ratio above about $J/h$. In the statistical reading, the same inequality says how much evidence a small feature needs before the prior stops smoothing it away. That is a bias–variance trade-off in a physicist's vocabulary.
+
+The same question, of how much structure to assume and what it costs you, comes up whenever physics is recovered from noisy data, as in [denoising single-atom potentials](../../projects/madelung-denoising.qmd).
+
+## Further reading
+
+- S. Geman and D. Geman, [Stochastic relaxation, Gibbs distributions, and the Bayesian restoration of images](https://doi.org/10.1109/TPAMI.1984.4767596), *IEEE Trans. Pattern Anal. Mach. Intell.* **6**, 721–741 (1984).
+- J. Besag, [On the statistical analysis of dirty pictures](https://doi.org/10.1111/j.2517-6161.1986.tb01412.x), *J. R. Stat. Soc. B* **48**, 259–279 (1986). Introduces iterated conditional modes, a fast deterministic alternative to sampling.
+- D. M. Greig, B. T. Porteous, and A. H. Seheult, [Exact maximum a posteriori estimation for binary images](https://doi.org/10.1111/j.2517-6161.1989.tb01764.x), *J. R. Stat. Soc. B* **51**, 271–279 (1989). Shows the most probable image can be found exactly with a minimum cut.
+
+*Portraits of J. Willard Gibbs (before 1903) and Ludwig Boltzmann (1902) are in the public domain, via Wikimedia Commons. The helix frame is from the replica-exchange simulations described on the [helix–coil project page](../../projects/helix-coil-nanotubes.qmd).*

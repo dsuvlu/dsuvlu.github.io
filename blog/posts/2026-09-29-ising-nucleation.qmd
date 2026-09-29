@@ -1,0 +1,63 @@
+---
+title: "Nucleation you can poke"
+description: "Metastability, critical droplets, and hysteresis in a lattice you can plant droplets into."
+date: 2026-09-29
+categories: [statistical-physics, nucleation]
+---
+
+On this site's home page, the lattice spells one word after another, and every change of word briefly heats the lattice. Without that pulse the old word does not go away. The field under it has reversed, so it is no longer the equilibrium state, but at low temperature it is *metastable*: nothing local can undo it, because every small change costs more than it gains. Getting out of a metastable state takes a rare, collective event, which is nucleation.
+
+## The critical droplet
+
+Start with every spin pointing down in a field $h > 0$ that favors up. Flipping a roughly circular droplet of radius $R$ gains $2h$ per spin in the bulk but pays a surface tension $\sigma$ along its edge. In the continuum approximation of classical nucleation theory,
+
+$$
+\Delta F(R) = 2\pi R\,\sigma - 2\pi h R^2 .
+$$
+
+The surface term wins for small droplets and the bulk term for large ones, so $\Delta F$ has a maximum at the critical radius
+
+$$
+R^* = \frac{\sigma}{2h}, \qquad \Delta F^* = \frac{\pi \sigma^2}{2h}.
+$$
+
+Droplets smaller than $R^*$ tend to shrink and larger ones tend to grow. For the square-lattice Ising model the surface tension along a lattice axis is known exactly from Onsager's solution: $\sigma(T) = 2J + k_BT \ln\tanh(J/k_BT)$, which falls to zero at $T_c$. The widget below uses that value to estimate $R^*$. It is only a guide: real droplets on a lattice are not circles, and the surface tension depends on the direction of the interface.
+
+<figure class="ising-nucleation column-page" data-ising-nucleation hidden>
+<div class="ising-nucleation-panels">
+<div class="ising-nucleation-lattice">
+<canvas data-panel="lattice" role="img" aria-label="A lattice of spins; click to plant a droplet."></canvas>
+<canvas data-panel="overlay" aria-hidden="true"></canvas>
+</div>
+<div class="ising-nucleation-chart">
+<p class="ising-chart-title">Magnetization against field</p>
+<canvas data-panel="chart" role="img" aria-label="Trace of magnetization against applied field; the live values are also given in the readout below the controls."></canvas>
+<div class="ising-tooltip" data-tooltip hidden><strong data-tip-m></strong> magnetization<br><strong data-tip-h></strong> field</div>
+</div>
+</div>
+<div class="ising-lab-controls">
+<label><span>Temperature <i>T</i> = <output data-out="temperature"></output></span><input type="range" data-control="temperature" min="0.8" max="2.2" step="0.05" value="1.0"></label>
+<label><span>Field <i>h</i> = <output data-out="field"></output></span><input type="range" data-control="field" min="-0.8" max="0.8" step="0.01" value="0.2"></label>
+<label><span>Droplet radius = <output data-out="radius"></output></span><input type="range" data-control="radius" min="1" max="15" step="1" value="6"></label>
+<button type="button" class="ising-button" data-control="play" aria-pressed="true">Pause</button>
+<button type="button" class="ising-button" data-control="sweep" aria-pressed="false">Sweep field</button>
+<button type="button" class="ising-button" data-control="reset">Reset against field</button>
+</div>
+<figcaption>Click the lattice to plant a droplet aligned with the field. Magnetization <i>m</i> = <output data-out="m"></output> · classical estimate <i>R</i>* ≈ <output data-out="rstar"></output> cells.</figcaption>
+</figure>
+
+<script type="module" src="../../assets/ising-nucleation.js"></script>
+
+## Things to try
+
+- **Plant droplets on either side of $R^*$.** At the default $T = 1$ and $h = 0.2$ the estimate is 4.3 cells, and the lattice agrees surprisingly well: in my runs, droplets of radius 4 or less melted back and droplets of radius 5 or more grew. Watch a growing droplet and it turns into a rounded square, the lattice anisotropy that the circular estimate ignores.
+- **Just wait.** At $T = 1$, $h = 0.2$ the barrier is about $23\,J$, so spontaneous nucleation essentially never happens on this lattice. Raise $h$ or $T$ and the barrier drops quickly; at $T = 1$, somewhere between $h = 0.5$ and $0.6$, droplets start appearing on their own within seconds.
+- **Sweep the field.** The magnetization lags behind the field and traces a hysteresis loop, switching only once the field is strong enough for nucleation to happen on the timescale of the sweep. The loop is not a property of the material alone: it depends on how fast the field moves compared to how long nucleation takes.
+- **Heat toward $T_c$.** The surface tension vanishes, $R^*$ collapses, and the loop closes.
+
+Classical nucleation theory, with a critical nucleus set by the competition between surface and bulk free energy, is also the usual starting point for real clusters. That includes the ligand-mediated nanocluster growth in two of my papers ([2019](https://doi.org/10.1021/acs.jpcc.9b07683), [2020](https://doi.org/10.1021/acs.jpcc.0c04459)). This lattice is about the simplest system where you can watch the same idea play out spin by spin.
+
+## Further reading
+
+- L. Onsager, [Crystal statistics. I. A two-dimensional model with an order–disorder transition](https://doi.org/10.1103/PhysRev.65.117), *Phys. Rev.* **65**, 117–149 (1944).
+- P. A. Rikvold, H. Tomita, S. Miyashita, and S. W. Sides, [Metastable lifetimes in a kinetic Ising model: Dependence on field and system size](https://doi.org/10.1103/PhysRevE.49.5080), *Phys. Rev. E* **49**, 5080–5090 (1994).

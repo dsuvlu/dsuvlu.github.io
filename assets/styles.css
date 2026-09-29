@@ -120,6 +120,9 @@
   --bs-body-bg: var(--paper);
   --bs-link-color: var(--blue);
   --bs-link-hover-color: var(--blue-dark);
+  /* chart marks, validated against --paper (dataviz palette checks) */
+  --chart-series: #2457d6;
+  --chart-grid: rgba(16, 35, 63, 0.14);
 }
 
 body {
@@ -663,6 +666,9 @@ body.quarto-dark {
   --bs-body-bg: var(--paper);
   --bs-link-color: var(--blue);
   --bs-link-hover-color: var(--blue-dark);
+  /* the link blue is too light for a chart mark on this ground */
+  --chart-series: #6590ee;
+  --chart-grid: rgba(231, 236, 243, 0.14);
 }
 
 body.quarto-dark ::selection {
@@ -1059,7 +1065,8 @@ body.quarto-dark .hero-photo {
   color: var(--vermilion);
 }
 
-.ising-reheat {
+.ising-reheat,
+.ising-button {
   padding: 0.3rem 0.85rem;
   color: var(--ink);
   font: inherit;
@@ -1069,7 +1076,8 @@ body.quarto-dark .hero-photo {
   border-radius: 999px;
 }
 
-.ising-reheat:hover {
+.ising-reheat:hover,
+.ising-button:hover {
   color: var(--blue);
   border-color: var(--blue);
 }
@@ -1079,4 +1087,189 @@ body.quarto-dark .hero-photo {
     flex-direction: column;
     gap: 0.6rem;
   }
+}
+
+/* Ising widgets in notes (assets/ising-denoise.js, ising-nucleation.js).
+   Canvases are drawn at one pixel per spin and scaled without smoothing. */
+
+.ising-lab {
+  margin: 2.5rem 0;
+}
+
+.ising-lab canvas,
+.ising-nucleation canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+.ising-lab-panels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ising-lab[data-shape="wide"] .ising-lab-panels {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ising-lab-panel p {
+  margin: 0.5rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+}
+
+.ising-lab-panel strong {
+  color: var(--ink);
+}
+
+.ising-lab-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: flex-end;
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--surface-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+.ising-lab-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.ising-lab-controls output {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.ising-lab-controls input[type="range"] {
+  width: 12rem;
+  accent-color: var(--blue);
+}
+
+.ising-lab-controls select {
+  padding: 0.3rem 0.5rem;
+  color: var(--ink);
+  font: inherit;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: 0.4rem;
+}
+
+@media (max-width: 720px) {
+  .ising-lab-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ising-lab[data-shape="wide"] .ising-lab-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ising-nucleation {
+  margin: 2.5rem 0;
+}
+
+.ising-nucleation-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.ising-nucleation-lattice {
+  position: relative;
+}
+
+.ising-nucleation-lattice canvas[data-panel="lattice"] {
+  cursor: crosshair;
+}
+
+.ising-nucleation canvas[data-panel="overlay"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: none;
+  border: 0;
+}
+
+.ising-nucleation-chart {
+  position: relative;
+}
+
+.ising-nucleation canvas[data-panel="chart"] {
+  aspect-ratio: 1.15;
+  image-rendering: auto;
+  background: none;
+  border: 0;
+}
+
+.ising-chart-title {
+  margin: 0 0 0.4rem;
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.ising-tooltip {
+  position: absolute;
+  z-index: 2;
+  padding: 0.4rem 0.6rem;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.35;
+  white-space: nowrap;
+  pointer-events: none;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: 0.4rem;
+  box-shadow: var(--menu-shadow);
+  transform: translate(12px, calc(-100% - 10px));
+}
+
+.ising-tooltip strong {
+  color: var(--ink);
+}
+
+.ising-nucleation figcaption {
+  margin-top: 0.75rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.ising-nucleation figcaption output {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .ising-nucleation-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Long display equations scroll within their own box on narrow screens
+   instead of widening the page. */
+
+mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }

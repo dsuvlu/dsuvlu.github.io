@@ -35,7 +35,7 @@ I use molecular simulation, statistical physics, and machine learning to uncover
 <span class="ising-readout" data-ising-readout aria-hidden="true"></span>
 </figcaption>
 </figure>
-<script src="assets/ising.js" defer></script>
+<script type="module" src="assets/ising.js"></script>
 :::
 
 ::: {.home-section .focus-section}

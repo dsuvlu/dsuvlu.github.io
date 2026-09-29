@@ -8,7 +8,9 @@ project:
     - assets/fonts/*.woff2
     - assets/fonts/OFL-*.txt
     - assets/video/*
-    - assets/ising.js
+    # module scripts import each other, which the link scan doesn't follow
+    - assets/ising*.js
+    - assets/portraits/*.jpg
   post-render: _scripts/post-render.py
 
 website:
