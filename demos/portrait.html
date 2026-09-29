@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Working notes on computational chemistry, statistical physics, and scientific computing.">
+<meta name="dcterms.date" content="2026-09-29">
+<meta name="description" content="Boltzmann condenses out of thermal noise: an Ising lattice whose external field is a photograph.">
 
-<title>Notes – Dylan Suvlu</title>
+<title>A portrait as a ground state – Dylan Suvlu</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,8 +35,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -78,39 +77,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <link rel="preload" href="../assets/fonts/gelasio-latin.woff2" as="font" type="font/woff2" crossorigin="">
 <link rel="preload" href="../assets/fonts/mulish-latin.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="canonical" href="https://dsuvlu.github.io/blog/">
+<link rel="canonical" href="https://dsuvlu.github.io/demos/portrait.html">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -143,18 +113,22 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
-<link rel="alternate" type="application/rss+xml" title="Dylan Suvlu" href="index.xml" data-external="1"><meta property="og:title" content="Notes – Dylan Suvlu">
-<meta property="og:description" content="Working notes on computational chemistry, statistical physics, and scientific computing.">
-<meta property="og:image" content="https://dsuvlu.github.io/blog/assets/social-preview.jpg">
+<meta property="og:title" content="A portrait as a ground state – Dylan Suvlu">
+<meta property="og:description" content="Boltzmann condenses out of thermal noise: an Ising lattice whose external field is a photograph.">
+<meta property="og:image" content="https://dsuvlu.github.io/assets/thumbnails/portrait.png">
 <meta property="og:site_name" content="Dylan Suvlu">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Notes – Dylan Suvlu">
-<meta name="twitter:description" content="Working notes on computational chemistry, statistical physics, and scientific computing.">
-<meta name="twitter:image" content="https://dsuvlu.github.io/blog/assets/social-preview.jpg">
+<meta property="og:image:height" content="714">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="A portrait as a ground state – Dylan Suvlu">
+<meta name="twitter:description" content="Boltzmann condenses out of thermal noise: an Ising lattice whose external field is a photograph.">
+<meta name="twitter:image" content="https://dsuvlu.github.io/assets/thumbnails/portrait.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="714">
+<meta name="twitter:image-width" content="1200">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -365,7 +339,7 @@ window.Quarto = {
 <span class="menu-text">Demos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
@@ -409,21 +383,23 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="aW5mZXJlbmNl">inference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50ZXJhY3RpdmU=">interactive <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWV0YQ==">meta <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bnVjbGVhdGlvbg==">nucleation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RhdGlzdGljYWwtcGh5c2ljcw==">statistical-physics <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Notes</h1>
-</div>
+<h1 class="title">A portrait as a ground state</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">interactive</div>
+    <div class="quarto-category">statistical-physics</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    Working notes on computational chemistry, statistical physics, and scientific computing.
+    Boltzmann condenses out of thermal noise: an Ising lattice whose external field is a photograph.
   </div>
 </div>
 
@@ -431,6 +407,12 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 29, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -440,107 +422,56 @@ window.Quarto = {
 </header>
 
 
-<p class="interior-lede">
-Short pieces about methods, papers, references, and computational experiments that do not fit neatly into a research article.
-</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="c3RhdGlzdGljYWwtcGh5c2ljcyUyQ251Y2xlYXRpb24lMkNpbnRlcmFjdGl2ZQ==" data-listing-date-sort="1790640000000" data-listing-file-modified-sort="1790689925939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="656">
-<div class="thumbnail"><a href="../blog/posts/2026-09-29-ising-nucleation.html" class="no-external">
-
-<img loading="lazy" src="../assets/thumbnails/ising-nucleation.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/2026-09-29-ising-nucleation.html" class="no-external">Nucleation you can poke</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhdGlzdGljYWwtcGh5c2ljcw=='); return false;">statistical-physics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bnVjbGVhdGlvbg=='); return false;">nucleation</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW50ZXJhY3RpdmU='); return false;">interactive</div>
-
+<!-- Raw HTML block: Pandoc would otherwise re-parse the widget markup. -->
+<div class="column-page">
+<div class="ising-portrait" data-ising-portrait="" hidden="">
+<div class="ising-portrait-stage">
+<div class="ising-portrait-arch">
+<canvas data-panel="main" role="img" aria-label="A portrait of a physicist forming out of a lattice of randomly flipping spins as it cools."></canvas>
+<img data-photo="" alt="">
 </div>
-<div class="delink listing-description"><a href="../blog/posts/2026-09-29-ising-nucleation.html" class="no-external">
-<p>Metastability, critical droplets, and hysteresis in a lattice you can plant droplets into.</p>
-</a></div>
+<div class="ising-portrait-side">
+<div class="ising-lab-controls">
+<label><span>Portrait</span><select data-control="who"><option value="boltzmann">Ludwig Boltzmann (1902)</option><option value="gibbs">J. Willard Gibbs</option></select></label>
+<label><span>Display</span><select data-control="display"><option value="spins">Spins, one frame at a time</option><option value="average">Time-averaged spins</option></select></label>
+<label><span>Final temperature <i>T</i> = <output data-out="temperature"></output></span><input type="range" data-control="temperature" min="0.6" max="3" step="0.05" value="1.1"></label>
+<label><span>Coupling <i>J</i> = <output data-out="coupling"></output></span><input type="range" data-control="coupling" min="0" max="1" step="0.02" value="0.3"></label>
+<label><span>Field strength <i>h</i><sub>0</sub> = <output data-out="field"></output></span><input type="range" data-control="field" min="0.2" max="3" step="0.05" value="1.2"></label>
+<label><span>Ending</span><select data-control="ending"><option value="hold">Stay as spins</option><option value="reveal">Fade to the photograph</option></select></label>
 </div>
-<div class="metadata">
-<a href="../blog/posts/2026-09-29-ising-nucleation.html" class="no-external">
-<div class="listing-date">
-Sep 29, 2026
-</div>
-</a>
+<p class="ising-portrait-status"><button type="button" class="ising-button" data-control="replay">Replay</button> <span data-out="status" aria-hidden="true"></span></p>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="c3RhdGlzdGljYWwtcGh5c2ljcyUyQ2luZmVyZW5jZSUyQ2ludGVyYWN0aXZl" data-listing-date-sort="1790640000000" data-listing-file-modified-sort="1790689925939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="822">
-<div class="thumbnail"><a href="../blog/posts/2026-09-29-ising-inference.html" class="no-external">
-
-<img loading="lazy" src="../assets/thumbnails/ising-inference.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/2026-09-29-ising-inference.html" class="no-external">The 404 page is doing Bayesian inference</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhdGlzdGljYWwtcGh5c2ljcw=='); return false;">statistical-physics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW5mZXJlbmNl'); return false;">inference</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW50ZXJhY3RpdmU='); return false;">interactive</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/2026-09-29-ising-inference.html" class="no-external">
-<p>Gibbs-sampling a picture of Gibbs: the Ising model on this site, read as a posterior over noisy images.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/2026-09-29-ising-inference.html" class="no-external">
-<div class="listing-date">
-Sep 29, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWV0YQ==" data-listing-date-sort="1755388800000" data-listing-file-modified-sort="1790689925939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="79">
-<div class="thumbnail"><a href="../blog/posts/2025-08-17-hello.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/2025-08-17-hello.html" class="no-external">A place for working notes</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWV0YQ=='); return false;">meta</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/2025-08-17-hello.html" class="no-external">
-<p>Why this site includes a space for methods, references, and unfinished technical ideas.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/2025-08-17-hello.html" class="no-external">
-<div class="listing-date">
-Aug 17, 2025
-</div>
-</a>
+<div class="ising-portrait-presets">
+<div><canvas data-preset="0.3,1.1,1.2" role="img" aria-label="Halftone preset."></canvas><h3 class="anchored">Halftone</h3><p><i>J</i> = 0.3, <i>T</i> = 1.1, <i>h</i><sub>0</sub> = 1.2. Nearly independent spins; the density of dark spins follows the tone.</p></div>
+<div><canvas data-preset="0.8,1.6,0.8" role="img" aria-label="Domains preset."></canvas><h3 class="anchored">Domains</h3><p><i>J</i> = 0.8, <i>T</i> = 1.6, <i>h</i><sub>0</sub> = 0.8. Below <i>T</i><sub>c</sub>, tone collapses into flat light and dark regions, like a woodcut.</p></div>
+<div><canvas data-preset="1,2.3,0.6" role="img" aria-label="Near-critical preset."></canvas><h3 class="anchored">Near critical</h3><p><i>J</i> = 1, <i>T</i> = 2.3, <i>h</i><sub>0</sub> = 0.6. Just above <i>T</i><sub>c</sub>; fluctuations on every scale, and the face flickers in and out.</p></div>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<script type="module" src="../assets/ising-portrait.js"></script>
+<section id="what-youre-seeing" class="level2 content-section">
+<h2 class="anchored" data-anchor-id="what-youre-seeing">What you’re seeing</h2>
+<p>Each spin sits in an external field set by how dark the photograph is at that point, <span class="math inline">\(h_i = h_0\,(2d_i - 1)\)</span> with darkness <span class="math inline">\(d_i\)</span> between 0 and 1. The lattice starts hot and disordered and cools toward the final temperature, so the portrait condenses out of thermal noise.</p>
+<p>The coupling <span class="math inline">\(J\)</span> decides the style. When it is weak, the spins are nearly independent and each one points up with probability set by its own field, <span class="math inline">\(\langle s_i \rangle \approx \tanh(h_i / k_B T)\)</span>. The density of dark spins then tracks the tone of the photo, which is a stochastic halftone. When <span class="math inline">\(J\)</span> is strong and the temperature is below the critical point, neighbors insist on agreeing, and gradients of tone collapse into flat domains. Near <span class="math inline">\(T_c\)</span>, fluctuations appear on every length scale and the picture is never quite still.</p>
+</section>
+<section id="things-to-try" class="level2 content-section">
+<h2 class="anchored" data-anchor-id="things-to-try">Things to try</h2>
+<ul>
+<li><strong>Switch to time-averaged spins.</strong> Averaging over recent frames turns the halftone into continuous tone, much like an old photogravure.</li>
+<li><strong>Raise the coupling above about 0.5 at low temperature.</strong> The face turns into a few large domains, and small features like the glasses disappear first: they cost more domain wall than their field is worth.</li>
+<li><strong>Lower the field strength while the coupling is strong.</strong> Only the largest regions of tone can still pay for their domain walls, so the portrait simplifies toward a silhouette.</li>
+<li><strong>Try Gibbs.</strong> His portrait has a dark studio background, which dominates the field and makes the face harder to recover. The <a href="../blog/posts/2026-09-29-ising-inference.html">denoising note</a> handles him with a little edge enhancement.</li>
+</ul>
+</section>
+<section id="credits-and-source" class="level2 content-section">
+<h2 class="anchored" data-anchor-id="credits-and-source">Credits and source</h2>
+<p>Portraits of Ludwig Boltzmann (1902) and J. Willard Gibbs (before 1903) are in the public domain, via Wikimedia Commons. The simulation is heat-bath Monte Carlo on a 128 × 160 lattice, written in plain JavaScript: <a href="https://github.com/dsuvlu/dsuvlu.github.io/blob/main/assets/ising-portrait.js"><code>ising-portrait.js</code></a> and the shared <a href="https://github.com/dsuvlu/dsuvlu.github.io/blob/main/assets/ising-core.js"><code>ising-core.js</code></a>.</p>
+</section>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

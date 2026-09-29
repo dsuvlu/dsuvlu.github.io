@@ -93,8 +93,10 @@ cells.
  ]]></description>
   <category>statistical-physics</category>
   <category>nucleation</category>
+  <category>interactive</category>
   <guid>https://dsuvlu.github.io/blog/posts/2026-09-29-ising-nucleation.html</guid>
   <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://dsuvlu.github.io/assets/thumbnails/ising-nucleation.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 <item>
   <title>The 404 page is doing Bayesian inference</title>
@@ -191,8 +193,10 @@ cells.
  ]]></description>
   <category>statistical-physics</category>
   <category>inference</category>
+  <category>interactive</category>
   <guid>https://dsuvlu.github.io/blog/posts/2026-09-29-ising-inference.html</guid>
   <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://dsuvlu.github.io/assets/thumbnails/ising-inference.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 <item>
   <title>A place for working notes</title>

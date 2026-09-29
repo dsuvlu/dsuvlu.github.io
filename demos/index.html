@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Working notes on computational chemistry, statistical physics, and scientific computing.">
+<meta name="description" content="Interactive simulations from statistical physics and molecular modeling that run in your browser.">
 
-<title>Notes – Dylan Suvlu</title>
+<title>Demos – Dylan Suvlu</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -88,9 +88,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 <link rel="preload" href="../assets/fonts/gelasio-latin.woff2" as="font" type="font/woff2" crossorigin="">
 <link rel="preload" href="../assets/fonts/mulish-latin.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="canonical" href="https://dsuvlu.github.io/blog/">
+<link rel="canonical" href="https://dsuvlu.github.io/demos/">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -143,18 +143,18 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles.css">
-<link rel="alternate" type="application/rss+xml" title="Dylan Suvlu" href="index.xml" data-external="1"><meta property="og:title" content="Notes – Dylan Suvlu">
-<meta property="og:description" content="Working notes on computational chemistry, statistical physics, and scientific computing.">
-<meta property="og:image" content="https://dsuvlu.github.io/blog/assets/social-preview.jpg">
+<meta property="og:title" content="Demos – Dylan Suvlu">
+<meta property="og:description" content="Interactive simulations from statistical physics and molecular modeling that run in your browser.">
+<meta property="og:image" content="https://dsuvlu.github.io/demos/assets/social-preview.jpg">
 <meta property="og:site_name" content="Dylan Suvlu">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Notes – Dylan Suvlu">
-<meta name="twitter:description" content="Working notes on computational chemistry, statistical physics, and scientific computing.">
-<meta name="twitter:image" content="https://dsuvlu.github.io/blog/assets/social-preview.jpg">
+<meta name="twitter:title" content="Demos – Dylan Suvlu">
+<meta name="twitter:description" content="Interactive simulations from statistical physics and molecular modeling that run in your browser.">
+<meta name="twitter:image" content="https://dsuvlu.github.io/demos/assets/social-preview.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -361,11 +361,11 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../demos/index.html"> 
+    <a class="nav-link active" href="../demos/index.html" aria-current="page"> 
 <span class="menu-text">Demos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
@@ -409,21 +409,19 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="aW5mZXJlbmNl">inference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50ZXJhY3RpdmU=">interactive <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWV0YQ==">meta <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bnVjbGVhdGlvbg==">nucleation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RhdGlzdGljYWwtcGh5c2ljcw==">statistical-physics <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Notes</h1>
+<h1 class="title">Demos</h1>
 </div>
 
 <div>
   <div class="description">
-    Working notes on computational chemistry, statistical physics, and scientific computing.
+    Interactive simulations from statistical physics and molecular modeling that run in your browser.
   </div>
 </div>
 
@@ -441,102 +439,61 @@ window.Quarto = {
 
 
 <p class="interior-lede">
-Short pieces about methods, papers, references, and computational experiments that do not fit neatly into a research article.
+Small simulations you can poke at. Each one runs in your browser; the notes linked here explain the physics behind them.
 </p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="c3RhdGlzdGljYWwtcGh5c2ljcyUyQ251Y2xlYXRpb24lMkNpbnRlcmFjdGl2ZQ==" data-listing-date-sort="1790640000000" data-listing-file-modified-sort="1790689925939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="656">
-<div class="thumbnail"><a href="../blog/posts/2026-09-29-ising-nucleation.html" class="no-external">
-
-<img loading="lazy" src="../assets/thumbnails/ising-nucleation.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/2026-09-29-ising-nucleation.html" class="no-external">Nucleation you can poke</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhdGlzdGljYWwtcGh5c2ljcw=='); return false;">statistical-physics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bnVjbGVhdGlvbg=='); return false;">nucleation</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW50ZXJhY3RpdmU='); return false;">interactive</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/2026-09-29-ising-nucleation.html" class="no-external">
-<p>Metastability, critical droplets, and hysteresis in a lattice you can plant droplets into.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/2026-09-29-ising-nucleation.html" class="no-external">
-<div class="listing-date">
-Sep 29, 2026
-</div>
-</a>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="aW50ZXJhY3RpdmUlMkNzdGF0aXN0aWNhbC1waHlzaWNz" data-listing-date-sort="1790640000000" data-listing-file-modified-sort="1790689925939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="481">
+<a href="../demos/portrait.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../assets/thumbnails/portrait.png" class="thumbnail-image card-img" style="height: 220px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+A portrait as a ground state
+</h5>
+<div class="card-text listing-description delink">
+<p>Boltzmann condenses out of thermal noise: an Ising lattice whose external field is a photograph.</p>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="c3RhdGlzdGljYWwtcGh5c2ljcyUyQ2luZmVyZW5jZSUyQ2ludGVyYWN0aXZl" data-listing-date-sort="1790640000000" data-listing-file-modified-sort="1790689925939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="822">
-<div class="thumbnail"><a href="../blog/posts/2026-09-29-ising-inference.html" class="no-external">
-
-<img loading="lazy" src="../assets/thumbnails/ising-inference.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/2026-09-29-ising-inference.html" class="no-external">The 404 page is doing Bayesian inference</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhdGlzdGljYWwtcGh5c2ljcw=='); return false;">statistical-physics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW5mZXJlbmNl'); return false;">inference</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW50ZXJhY3RpdmU='); return false;">interactive</div>
-
+</div></a>
 </div>
-<div class="delink listing-description"><a href="../blog/posts/2026-09-29-ising-inference.html" class="no-external">
+<div class="g-col-1" data-index="1" data-categories="c3RhdGlzdGljYWwtcGh5c2ljcyUyQ2luZmVyZW5jZSUyQ2ludGVyYWN0aXZl" data-listing-date-sort="1790640000000" data-listing-file-modified-sort="1790689925939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="822">
+<a href="../blog/posts/2026-09-29-ising-inference.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../assets/thumbnails/ising-inference.png" class="thumbnail-image card-img" style="height: 220px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The 404 page is doing Bayesian inference
+</h5>
+<div class="card-text listing-description delink">
 <p>Gibbs-sampling a picture of Gibbs: the Ising model on this site, read as a posterior over noisy images.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/2026-09-29-ising-inference.html" class="no-external">
-<div class="listing-date">
-Sep 29, 2026
-</div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWV0YQ==" data-listing-date-sort="1755388800000" data-listing-file-modified-sort="1790689925939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="79">
-<div class="thumbnail"><a href="../blog/posts/2025-08-17-hello.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/2025-08-17-hello.html" class="no-external">A place for working notes</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWV0YQ=='); return false;">meta</div>
-
+</div></a>
 </div>
-<div class="delink listing-description"><a href="../blog/posts/2025-08-17-hello.html" class="no-external">
-<p>Why this site includes a space for methods, references, and unfinished technical ideas.</p>
-</a></div>
+<div class="g-col-1" data-index="2" data-categories="c3RhdGlzdGljYWwtcGh5c2ljcyUyQ251Y2xlYXRpb24lMkNpbnRlcmFjdGl2ZQ==" data-listing-date-sort="1790640000000" data-listing-file-modified-sort="1790689925939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="656">
+<a href="../blog/posts/2026-09-29-ising-nucleation.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../assets/thumbnails/ising-nucleation.png" class="thumbnail-image card-img" style="height: 220px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Nucleation you can poke
+</h5>
+<div class="card-text listing-description delink">
+<p>Metastability, critical droplets, and hysteresis in a lattice you can plant droplets into.</p>
 </div>
-<div class="metadata">
-<a href="../blog/posts/2025-08-17-hello.html" class="no-external">
-<div class="listing-date">
-Aug 17, 2025
 </div>
-</a>
-</div>
+</div></a>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>

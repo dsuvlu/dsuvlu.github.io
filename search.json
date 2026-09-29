@@ -70,6 +70,34 @@
     "text": "Let’s connect\nFor research conversations, collaborations, or speaking invitations, send me an email. You can also find my work on Google Scholar, GitHub, and ORCID."
   },
   {
+    "objectID": "demos/portrait.html",
+    "href": "demos/portrait.html",
+    "title": "A portrait as a ground state",
+    "section": "",
+    "text": "PortraitLudwig Boltzmann (1902)J. Willard Gibbs\nDisplaySpins, one frame at a timeTime-averaged spins\nFinal temperature T = \nCoupling J = \nField strength h0 = \nEndingStay as spinsFade to the photograph\n\nReplay \n\n\n\nJ = 0.3, T = 1.1, h0 = 1.2. Nearly independent spins; the density of dark spins follows the tone.\nJ = 0.8, T = 1.6, h0 = 0.8. Below Tc, tone collapses into flat light and dark regions, like a woodcut.\nJ = 1, T = 2.3, h0 = 0.6. Just above Tc; fluctuations on every scale, and the face flickers in and out."
+  },
+  {
+    "objectID": "demos/portrait.html#what-youre-seeing",
+    "href": "demos/portrait.html#what-youre-seeing",
+    "title": "A portrait as a ground state",
+    "section": "What you’re seeing",
+    "text": "What you’re seeing\nEach spin sits in an external field set by how dark the photograph is at that point, \\(h_i = h_0\\,(2d_i - 1)\\) with darkness \\(d_i\\) between 0 and 1. The lattice starts hot and disordered and cools toward the final temperature, so the portrait condenses out of thermal noise.\nThe coupling \\(J\\) decides the style. When it is weak, the spins are nearly independent and each one points up with probability set by its own field, \\(\\langle s_i \\rangle \\approx \\tanh(h_i / k_B T)\\). The density of dark spins then tracks the tone of the photo, which is a stochastic halftone. When \\(J\\) is strong and the temperature is below the critical point, neighbors insist on agreeing, and gradients of tone collapse into flat domains. Near \\(T_c\\), fluctuations appear on every length scale and the picture is never quite still."
+  },
+  {
+    "objectID": "demos/portrait.html#things-to-try",
+    "href": "demos/portrait.html#things-to-try",
+    "title": "A portrait as a ground state",
+    "section": "Things to try",
+    "text": "Things to try\n\nSwitch to time-averaged spins. Averaging over recent frames turns the halftone into continuous tone, much like an old photogravure.\nRaise the coupling above about 0.5 at low temperature. The face turns into a few large domains, and small features like the glasses disappear first: they cost more domain wall than their field is worth.\nLower the field strength while the coupling is strong. Only the largest regions of tone can still pay for their domain walls, so the portrait simplifies toward a silhouette.\nTry Gibbs. His portrait has a dark studio background, which dominates the field and makes the face harder to recover. The denoising note handles him with a little edge enhancement."
+  },
+  {
+    "objectID": "demos/portrait.html#credits-and-source",
+    "href": "demos/portrait.html#credits-and-source",
+    "title": "A portrait as a ground state",
+    "section": "Credits and source",
+    "text": "Credits and source\nPortraits of Ludwig Boltzmann (1902) and J. Willard Gibbs (before 1903) are in the public domain, via Wikimedia Commons. The simulation is heat-bath Monte Carlo on a 128 × 160 lattice, written in plain JavaScript: ising-portrait.js and the shared ising-core.js."
+  },
+  {
     "objectID": "talks/index.html",
     "href": "talks/index.html",
     "title": "Talks",
@@ -151,7 +179,7 @@
     "href": "blog/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Short pieces about methods, papers, references, and computational experiments that do not fit neatly into a research article.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNucleation you can poke\n\n\n\nstatistical-physics\n\nnucleation\n\n\n\nMetastability, critical droplets, and hysteresis in a lattice you can plant droplets into.\n\n\n\n\n\nSep 29, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nThe 404 page is doing Bayesian inference\n\n\n\nstatistical-physics\n\ninference\n\n\n\nGibbs-sampling a picture of Gibbs: the Ising model on this site, read as a posterior over noisy images.\n\n\n\n\n\nSep 29, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nA place for working notes\n\n\n\nmeta\n\n\n\nWhy this site includes a space for methods, references, and unfinished technical ideas.\n\n\n\n\n\nAug 17, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Short pieces about methods, papers, references, and computational experiments that do not fit neatly into a research article.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNucleation you can poke\n\n\n\nstatistical-physics\n\nnucleation\n\ninteractive\n\n\n\nMetastability, critical droplets, and hysteresis in a lattice you can plant droplets into.\n\n\n\n\n\nSep 29, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nThe 404 page is doing Bayesian inference\n\n\n\nstatistical-physics\n\ninference\n\ninteractive\n\n\n\nGibbs-sampling a picture of Gibbs: the Ising model on this site, read as a posterior over noisy images.\n\n\n\n\n\nSep 29, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nA place for working notes\n\n\n\nmeta\n\n\n\nWhy this site includes a space for methods, references, and unfinished technical ideas.\n\n\n\n\n\nAug 17, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/posts/2026-09-29-ising-nucleation.html",
@@ -236,6 +264,13 @@
     "title": "Dylan Suvlu",
     "section": "",
     "text": "Theory, simulation, and data-driven inference for complex molecular systems."
+  },
+  {
+    "objectID": "demos/index.html",
+    "href": "demos/index.html",
+    "title": "Demos",
+    "section": "",
+    "text": "Small simulations you can poke at. Each one runs in your browser; the notes linked here explain the physics behind them.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA portrait as a ground state\n\n\nBoltzmann condenses out of thermal noise: an Ising lattice whose external field is a photograph.\n\n\n\n\n\n\n\n\n\n\n\n\nThe 404 page is doing Bayesian inference\n\n\nGibbs-sampling a picture of Gibbs: the Ising model on this site, read as a posterior over noisy images.\n\n\n\n\n\n\n\n\n\n\n\n\nNucleation you can poke\n\n\nMetastability, critical droplets, and hysteresis in a lattice you can plant droplets into.\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "publications.html",

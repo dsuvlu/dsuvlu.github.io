@@ -14,5 +14,13 @@
       "/blog/posts/2026-09-29-ising-inference.html",
       "/blog/posts/2025-08-17-hello.html"
     ]
+  },
+  {
+    "listing": "/demos/index.html",
+    "items": [
+      "/demos/portrait.html",
+      "/blog/posts/2026-09-29-ising-inference.html",
+      "/blog/posts/2026-09-29-ising-nucleation.html"
+    ]
   }
 ]
