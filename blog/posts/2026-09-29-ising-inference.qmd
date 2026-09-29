@@ -2,7 +2,8 @@
 title: "The 404 page is doing Bayesian inference"
 description: "Gibbs-sampling a picture of Gibbs: the Ising model on this site, read as a posterior over noisy images."
 date: 2026-09-29
-categories: [statistical-physics, inference]
+categories: [statistical-physics, inference, interactive]
+image: ../../assets/thumbnails/ising-inference.png
 ---
 
 The spins on this site's [404 page](/this-page-does-not-exist) and home page are a biased Ising model. An external field shaped like the text pushes spins up inside the glyphs and down outside them, and the lattice is cooled until the pattern condenses out of thermal noise. The same equations, read differently, are one of the classic methods for restoring noisy images.

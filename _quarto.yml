@@ -35,6 +35,8 @@ website:
             text: Research software
           - href: talks/index.qmd
             text: Talks
+      - href: demos/index.qmd
+        text: Demos
       - href: blog/index.qmd
         text: Notes
       - href: cv.qmd

@@ -1273,3 +1273,119 @@ mjx-container[display="true"] {
   overflow-x: auto;
   overflow-y: hidden;
 }
+
+/* Portrait demo (assets/ising-portrait.js). The arch matches the hero photo. */
+
+.ising-portrait {
+  margin: 0 0 3rem;
+}
+
+.ising-portrait-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.ising-portrait-arch {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--paper-deep);
+  border-radius: 10rem 10rem 1.1rem 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.ising-portrait-arch canvas,
+.ising-portrait-arch img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.ising-portrait canvas {
+  image-rendering: pixelated;
+}
+
+.ising-portrait-arch img {
+  opacity: 0;
+  filter: grayscale(1) contrast(1.05);
+  transition: opacity 1.2s ease;
+}
+
+.ising-portrait-arch.is-revealed img {
+  opacity: 1;
+}
+
+.ising-portrait-side .ising-lab-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  margin-top: 0;
+}
+
+.ising-portrait-side .ising-lab-controls input[type="range"] {
+  width: 100%;
+}
+
+.ising-portrait-status {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  margin: 1rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.ising-portrait-presets {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.ising-portrait-presets canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  border-radius: 10rem 10rem 1.1rem 1.1rem;
+}
+
+.ising-portrait-presets h3 {
+  margin: 0.9rem 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.ising-portrait-presets p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .ising-portrait-stage,
+  .ising-portrait-presets {
+    grid-template-columns: 1fr;
+  }
+
+  .ising-portrait-arch,
+  .ising-portrait-presets canvas {
+    max-width: 20rem;
+  }
+}
+
+/* Widgets that show photographs keep photographic polarity in dark mode:
+   the theme swaps ink and paper, which would render the portraits (and the
+   helix frame) as negatives. Text lattices (band, 404) are fine inverted. */
+
+body.quarto-dark .ising-portrait,
+body.quarto-dark .ising-lab {
+  --ising-up: #08111c;
+  --ising-down: #e7ecf3;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "dsuvlu-site-scripts",
+  "private": true,
+  "description": "Maintenance scripts for the site; not used by the Quarto build or CI.",
+  "type": "module",
+  "scripts": {
+    "thumbnails": "node thumbnails.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

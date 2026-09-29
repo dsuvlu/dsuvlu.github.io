@@ -2,7 +2,8 @@
 title: "Nucleation you can poke"
 description: "Metastability, critical droplets, and hysteresis in a lattice you can plant droplets into."
 date: 2026-09-29
-categories: [statistical-physics, nucleation]
+categories: [statistical-physics, nucleation, interactive]
+image: ../../assets/thumbnails/ising-nucleation.png
 ---
 
 On this site's home page, the lattice spells one word after another, and every change of word briefly heats the lattice. Without that pulse the old word does not go away. The field under it has reversed, so it is no longer the equilibrium state, but at low temperature it is *metastable*: nothing local can undo it, because every small change costs more than it gains. Getting out of a metastable state takes a rare, collective event, which is nucleation.

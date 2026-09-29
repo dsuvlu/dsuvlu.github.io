@@ -1,0 +1,21 @@
+---
+title: "Demos"
+description: "Interactive simulations from statistical physics and molecular modeling that run in your browser."
+# The gallery collects every page tagged `interactive`, wherever it lives:
+# demos in this folder, and notes that embed a demo.
+listing:
+  contents:
+    - "*.qmd"
+    - "../blog/posts/*.qmd"
+  include:
+    categories: "interactive"
+  type: grid
+  grid-columns: 3
+  image-height: 220px
+  fields: [image, title, description]
+  sort: "date desc"
+  sort-ui: false
+  filter-ui: false
+---
+
+<p class="interior-lede">Small simulations you can poke at. Each one runs in your browser; the notes linked here explain the physics behind them.</p>

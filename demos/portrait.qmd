@@ -1,0 +1,62 @@
+---
+title: "A portrait as a ground state"
+description: "Boltzmann condenses out of thermal noise: an Ising lattice whose external field is a photograph."
+date: 2026-09-29
+categories: [interactive, statistical-physics]
+image: ../assets/thumbnails/portrait.png
+---
+
+<!-- Raw HTML block: Pandoc would otherwise re-parse the widget markup. -->
+```{=html}
+<div class="column-page">
+<div class="ising-portrait" data-ising-portrait hidden>
+<div class="ising-portrait-stage">
+<div class="ising-portrait-arch">
+<canvas data-panel="main" role="img" aria-label="A portrait of a physicist forming out of a lattice of randomly flipping spins as it cools."></canvas>
+<img data-photo alt="">
+</div>
+<div class="ising-portrait-side">
+<div class="ising-lab-controls">
+<label><span>Portrait</span><select data-control="who"><option value="boltzmann">Ludwig Boltzmann (1902)</option><option value="gibbs">J. Willard Gibbs</option></select></label>
+<label><span>Display</span><select data-control="display"><option value="spins">Spins, one frame at a time</option><option value="average">Time-averaged spins</option></select></label>
+<label><span>Final temperature <i>T</i> = <output data-out="temperature"></output></span><input type="range" data-control="temperature" min="0.6" max="3" step="0.05" value="1.1"></label>
+<label><span>Coupling <i>J</i> = <output data-out="coupling"></output></span><input type="range" data-control="coupling" min="0" max="1" step="0.02" value="0.3"></label>
+<label><span>Field strength <i>h</i><sub>0</sub> = <output data-out="field"></output></span><input type="range" data-control="field" min="0.2" max="3" step="0.05" value="1.2"></label>
+<label><span>Ending</span><select data-control="ending"><option value="hold">Stay as spins</option><option value="reveal">Fade to the photograph</option></select></label>
+</div>
+<p class="ising-portrait-status"><button type="button" class="ising-button" data-control="replay">Replay</button> <span data-out="status" aria-hidden="true"></span></p>
+</div>
+</div>
+<div class="ising-portrait-presets">
+<div><canvas data-preset="0.3,1.1,1.2" role="img" aria-label="Halftone preset."></canvas><h3>Halftone</h3><p><i>J</i> = 0.3, <i>T</i> = 1.1, <i>h</i><sub>0</sub> = 1.2. Nearly independent spins; the density of dark spins follows the tone.</p></div>
+<div><canvas data-preset="0.8,1.6,0.8" role="img" aria-label="Domains preset."></canvas><h3>Domains</h3><p><i>J</i> = 0.8, <i>T</i> = 1.6, <i>h</i><sub>0</sub> = 0.8. Below <i>T</i><sub>c</sub>, tone collapses into flat light and dark regions, like a woodcut.</p></div>
+<div><canvas data-preset="1,2.3,0.6" role="img" aria-label="Near-critical preset."></canvas><h3>Near critical</h3><p><i>J</i> = 1, <i>T</i> = 2.3, <i>h</i><sub>0</sub> = 0.6. Just above <i>T</i><sub>c</sub>; fluctuations on every scale, and the face flickers in and out.</p></div>
+</div>
+</div>
+</div>
+```
+
+<script type="module" src="../assets/ising-portrait.js"></script>
+
+::: {.content-section}
+## What you're seeing
+
+Each spin sits in an external field set by how dark the photograph is at that point, $h_i = h_0\,(2d_i - 1)$ with darkness $d_i$ between 0 and 1. The lattice starts hot and disordered and cools toward the final temperature, so the portrait condenses out of thermal noise.
+
+The coupling $J$ decides the style. When it is weak, the spins are nearly independent and each one points up with probability set by its own field, $\langle s_i \rangle \approx \tanh(h_i / k_B T)$. The density of dark spins then tracks the tone of the photo, which is a stochastic halftone. When $J$ is strong and the temperature is below the critical point, neighbors insist on agreeing, and gradients of tone collapse into flat domains. Near $T_c$, fluctuations appear on every length scale and the picture is never quite still.
+:::
+
+::: {.content-section}
+## Things to try
+
+- **Switch to time-averaged spins.** Averaging over recent frames turns the halftone into continuous tone, much like an old photogravure.
+- **Raise the coupling above about 0.5 at low temperature.** The face turns into a few large domains, and small features like the glasses disappear first: they cost more domain wall than their field is worth.
+- **Lower the field strength while the coupling is strong.** Only the largest regions of tone can still pay for their domain walls, so the portrait simplifies toward a silhouette.
+- **Try Gibbs.** His portrait has a dark studio background, which dominates the field and makes the face harder to recover. The [denoising note](../blog/posts/2026-09-29-ising-inference.qmd) handles him with a little edge enhancement.
+:::
+
+::: {.content-section}
+## Credits and source
+
+Portraits of Ludwig Boltzmann (1902) and J. Willard Gibbs (before 1903) are in the public domain, via Wikimedia Commons. The simulation is heat-bath Monte Carlo on a 128 × 160 lattice, written in plain JavaScript: [`ising-portrait.js`](https://github.com/dsuvlu/dsuvlu.github.io/blob/main/assets/ising-portrait.js) and the shared [`ising-core.js`](https://github.com/dsuvlu/dsuvlu.github.io/blob/main/assets/ising-core.js).
+:::
